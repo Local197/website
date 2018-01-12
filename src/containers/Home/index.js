@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { getLocale } from 'reducers/locale';
+import Footer from 'components/Footer';
 
 require('./index.scss');
 
 const Home = ({ locale }) => (
     <div className="app-Home">
-      welcome! locale is: {locale}
+      <Footer />
     </div>
 );
 
