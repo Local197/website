@@ -3,7 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - npm install --production && npm install -g webpack && webpack -p
+      - npm install --production && node_modules/.bin/webpack -p
 
 artifacts:
   files:
