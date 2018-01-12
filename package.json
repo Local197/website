@@ -59,7 +59,7 @@
     "babel-core": "^6.25.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.0",
-    "svgo": "^0.7.2",
+    "svgo": "^0.7.2"
   },
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
