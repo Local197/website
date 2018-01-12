@@ -6,7 +6,8 @@ html {
 }
 
 body {
-  background-color: #FFF;
+  background-image: url('assets/wood.jpg');
+  background-repeat: repeat;
   font-weight: 200;
   margin: 0;
   min-height: calc(100vh - 80px);
