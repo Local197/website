@@ -24,10 +24,7 @@
   },
   "homepage": "https://github.com/Local197/website#readme",
   "devDependencies": {
-    "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
     "eslint": "^4.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-react": "^7.1.0",
@@ -37,7 +34,6 @@
     "stylelint-config-sass-guidelines": "^4.0.1",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.2.0",
-    "svgo": "^0.7.2",
     "webpack-dev-server": "^2.10.1"
   },
   "dependencies": {
@@ -59,7 +55,11 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "svgo-loader": "^1.2.1"
+    "svgo-loader": "^1.2.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "svgo": "^0.7.2",
   },
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
