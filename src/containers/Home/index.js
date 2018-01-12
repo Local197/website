@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 
 import { getLocale } from 'reducers/locale';
 import Footer from 'components/Footer';
+import Panel from 'components/Panel';
 
 require('./index.scss');
 
 const Home = ({ locale }) => (
     <div className="app-Home">
+      <Panel />
       <Footer />
     </div>
 );

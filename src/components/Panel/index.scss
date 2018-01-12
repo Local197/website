@@ -1,0 +1,16 @@
+@import 'stylesheets/variables';
+
+.app-Panel {
+  &-container {
+    background-color: #FFF;
+    box-shadow: $shadow;
+    margin: 0 auto;
+    max-width: 1145px;
+    position: relative;
+  }
+
+  &-content {
+    padding: 40px;
+  }
+
+}
