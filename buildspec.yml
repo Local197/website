@@ -1,6 +1,9 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - printenv > .env
   build:
     commands:
       - npm install --production && node_modules/.bin/webpack -p
