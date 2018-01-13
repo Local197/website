@@ -14,8 +14,9 @@
     position: relative;
 
     &-copy {
-      margin-left: auto;
       display: block;
+      font-size: $font-paragraph-s;
+      margin-left: auto;
       position: absolute;
       right: 0;
       top: 0;

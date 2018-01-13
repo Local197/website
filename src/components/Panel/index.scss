@@ -14,18 +14,19 @@
   };
 
   &-container {
-    flex-grow: 3;
-    padding: 10px;
+    padding: 10px 30px 30px;
+    width: 100%;
 
     @include breakpoint(small) {
       order: 2;
+      padding: 10px;
     }
   }
 
   &-sidebar {
     background-color: $brown;
     color: $white;
-    flex-grow: 1;
+    min-width: 240px;
     padding: 10px;
   }
 
