@@ -16,7 +16,7 @@ export default class Footer extends Component {
             <a dangerouslySetInnerHTML={github} href="https://github.com/Local197" rel="noopener" target="__blank" />
           </div>
           <div>
-            <span className="app-Footer-content-copy">2017 - 2018 &copy; UBC Local 197</span>
+            <span className="app-Footer-content-copy">2016 - 2018 &copy; UBC Local 197</span>
           </div>
         </div>
       </div>

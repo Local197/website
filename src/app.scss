@@ -17,10 +17,9 @@ body {
 }
 
 h1 {
-  // font-family: $font-marydale;
-  // color: $white;
-  // font-size: $font-heading-l;
-  font-weight: 100;
+  font-family: $font-paralucent;
+  font-size: $font-heading-l;
+  font-weight: $font-weight-heading;
   margin: 0;
 
   @include breakpoint(small) {

@@ -8,7 +8,7 @@ export default class Panel extends Component {
     return(
       <div className="app-Panel">
         <div className="app-Panel-container">
-          content area.
+          <h1>Test</h1>
         </div>
       </div>
     );
