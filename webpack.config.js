@@ -10,7 +10,8 @@ const extractSass = new ExtractTextPlugin({
 const html = new HtmlWebpackPlugin({
   title: 'UBC Local 197',
   filename: 'index.html',
-  template: 'index.ejs'
+  template: 'index.ejs',
+  favicon: 'assets/favicon.ico'
 });
 
 const sourceFolder = path.resolve(__dirname, 'src');

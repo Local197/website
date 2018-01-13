@@ -7,6 +7,7 @@
   flex-flow: row;
   margin: 0 auto;
   max-width: 1145px;
+  overflow: hidden;
   position: relative;
 
   @include breakpoint(small) {

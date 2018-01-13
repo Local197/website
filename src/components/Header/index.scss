@@ -1,6 +1,8 @@
 @import 'stylesheets/variables';
 
 .app-Header {
+  overflow: hidden;
+  
   &-top {
     box-shadow: $shadow;
     display: flex;
