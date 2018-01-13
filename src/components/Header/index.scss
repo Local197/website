@@ -3,6 +3,7 @@
 .app-Header {
   &-top {
     box-shadow: $shadow;
+    color: lighten($black, 20%);
     display: flex;
     flex-flow: row;
     margin: 0 auto;
