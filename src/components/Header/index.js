@@ -14,11 +14,11 @@ export default class Header extends Component {
       <div className="app-Header">
         <div className="app-Header-top">
           <div className="app-Header-container">
-            <h1>Carpenters&rsquo; Local 197</h1>
               <div className="app-Header-logo">
                 <div className="app-Header-logo-placeholder" dangerouslySetInnerHTML={logoPlaceholder}/>
                 <img data-src={logo}/>
               </div>
+            <h1>Carpenters&rsquo; Local 197</h1>
             <h3>Washington D.C., Maryland, & Virginia</h3>
             <Button click={() => this.props.onTranslate(this.props.locale) }>
               <Translate language="en">
