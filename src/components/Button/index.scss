@@ -36,11 +36,14 @@
 
   &-tertiary {
     @extend %base;
-    background-color: $brown;
+    background-color: $red;
     color: $white;
+    flex-grow: 1;
+    transition: background-color 0.15s ease-in-out;
 
-    &:active {
-      background-color: darken($brown, 5%);
+    &:hover {
+      background-color: darken($red, 10%);
+      filter: none;
     }
   }
 }

@@ -7,25 +7,19 @@ import { toggleLocale } from 'actions/locale';
 import Footer from 'components/Footer';
 import Panel from 'components/Panel';
 import Button from 'components/Button';
+import HeaderContainer from 'containers/HeaderContainer';
 import Translate from 'containers/Translate';
 
 require('./index.scss');
 
 const Home = ({ locale, onTranslate }) => (
     <div className="app-Home">
+      <HeaderContainer />
       <Panel>
         <h2>
           <Translate language="en">This is who we are:</Translate>
-          <Translate language="es">Esto es lo que somos nosotros:</Translate>
+          <Translate language="es">Esto es quienes somos:</Translate>
         </h2>
-        <Button secondary click={() => onTranslate(locale) }>
-          <Translate language="en">
-            Espa&ntilde;ol
-          </Translate>
-          <Translate language="es">
-            English
-          </Translate>
-        </Button>
         <Translate language="en">
           <p>We are construction carpenters. We live here, in the community. We come from different backgrounds, but we share many things in common.</p>
           <p>We give our best effort to serve our membership and support the needs of union contractors that hire us.</p>

@@ -1,0 +1,63 @@
+@import 'stylesheets/variables';
+
+.app-Header {
+  &-top {
+    box-shadow: $shadow;
+    display: flex;
+    flex-flow: row;
+    margin: 0 auto;
+    max-width: 1145px;
+    position: relative;
+
+    @include breakpoint(small) {
+      flex-flow: column;
+    };
+  }
+
+  &-nav {
+    background-color: $red;
+    box-shadow: $shadow;
+    display: flex;
+    flex-flow: row;
+    margin: 0 auto;
+    max-width: 1145px;
+    position: relative;
+  }
+
+  &-container {
+    background-attachment: fixed;
+    background-image: url('../../assets/header.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 30px 30px;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint(small) {
+      order: 2;
+      padding: 10px;
+    }
+
+    > h1 {
+      margin: 10px auto;
+    }
+
+    > button {
+      width: 300px;
+    }
+  }
+
+  &-logo {
+    margin: 15px auto 0;
+    position: relative;
+    width: 100px;
+
+    > img {
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 105px;
+    }
+  }
+}
