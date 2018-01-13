@@ -14,7 +14,6 @@ require('./index.scss');
 
 const Home = ({ locale, onTranslate }) => (
     <div className="app-Home">
-      <HeaderContainer />
       <Panel>
         <h2>
           <Translate language="en">This is who we are:</Translate>

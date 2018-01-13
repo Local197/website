@@ -3,18 +3,20 @@
 .app-Panel {
   background-color: #FFF;
   box-shadow: $shadow;
-  display: flex;
-  flex-flow: row;
   margin: 0 auto;
   max-width: 1145px;
-  overflow: hidden;
   position: relative;
 
-  @include breakpoint(small) {
-    flex-flow: column;
-  };
-
   &-container {
+    display: flex;
+    flex-flow: row;
+
+    @include breakpoint(small) {
+      flex-flow: column;
+    };
+  }
+
+  &-content {
     padding: 10px 30px 30px;
     width: 100%;
 
