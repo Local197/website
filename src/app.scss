@@ -9,6 +9,7 @@ body {
   background-image: url('assets/wood.jpg');
   background-repeat: repeat;
   font-family: $font-usual;
+  font-size: $font-paragraph-m;
   font-weight: 200;
   margin: 0;
   min-height: calc(100vh - 80px);
@@ -19,8 +20,6 @@ body {
 h1 {
   font-family: $font-paralucent;
   font-size: $font-heading-l;
-  font-weight: $font-weight-heading;
-  margin: 0;
 
   @include breakpoint(small) {
     // font-size: $font-heading-s;
@@ -33,7 +32,8 @@ h1 {
 }
 
 h2 {
-  // color: $salmon;
+  font-family: $font-paralucent;
+  font-size: $font-heading-s;
   font-weight: 300;
   text-align: center;
   // font-family: $font-ingra;

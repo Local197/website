@@ -1,0 +1,46 @@
+@import 'stylesheets/variables';
+
+%base {
+  border: 0;
+  cursor: pointer;
+  font-size: $font-paragraph-s;
+  outline: none;
+  padding: 0.75em 2em;
+  transition: filter 0.2s linear;
+
+  &:hover {
+    filter: drop-shadow($shadow-filter);
+  }
+}
+
+.app-Button {
+  &-primary {
+    @extend %base;
+    background-color: $brown;
+    color: $white;
+
+    &:active {
+      background-color: darken($brown, 5%);
+    }
+  }
+
+  &-secondary {
+    @extend %base;
+    background-color: $white;
+    color: $black;
+
+    &:active {
+      background-color: darken($white, 5%);
+    }
+  }
+
+  &-tertiary {
+    @extend %base;
+    background-color: $brown;
+    color: $white;
+
+    &:active {
+      background-color: darken($brown, 5%);
+    }
+  }
+}
