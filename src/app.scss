@@ -8,12 +8,12 @@ html {
 body {
   background-image: url('assets/wood.jpg');
   background-repeat: repeat;
+  font-family: $font-usual;
   font-weight: 200;
   margin: 0;
   min-height: calc(100vh - 80px);
   padding-bottom: 80px;
   position: relative;
-  // font-family: $font-ingra;
 }
 
 h1 {
