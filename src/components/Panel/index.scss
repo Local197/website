@@ -26,8 +26,8 @@
   }
 
   &-sidebar {
-    background-color: $brown;
-    color: $white;
+    background-color: darken($white, 3%);
+    color: $black;
     min-width: 240px;
     padding: 10px;
   }
