@@ -1,8 +1,6 @@
 @import 'stylesheets/variables';
 
 .app-Header {
-  overflow: hidden;
-  
   &-top {
     box-shadow: $shadow;
     display: flex;
@@ -32,17 +30,18 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     padding: 10px 30px 30px;
     text-align: center;
     width: 100%;
 
     @include breakpoint(small) {
-      order: 2;
-      padding: 10px;
+      padding: 30px;
+      width: calc(100% - 60px);
     }
 
     > h1 {
-      margin: 10px auto;
+      margin: 10px 0;
     }
 
     > button {

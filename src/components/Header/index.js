@@ -20,7 +20,7 @@ export default class Header extends Component {
               </div>
             <h1>Carpenters&rsquo; Local 197</h1>
             <h3>Washington D.C., Maryland, & Virginia</h3>
-            <Button click={() => this.props.onTranslate(this.props.locale) }>
+            <Button tertiary click={() => this.props.onTranslate(this.props.locale) }>
               <Translate language="en">
                 Traducir a Espa&ntilde;ol
               </Translate>
