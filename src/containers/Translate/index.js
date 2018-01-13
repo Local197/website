@@ -6,13 +6,13 @@ import { getLocale } from 'reducers/locale';
 
 require('./index.scss');
 
-const Text = ({ locale, language, children }) => (
+const Translate = ({ locale, language, children }) => (
   locale == language ?
-  <span className="app-Text">{children}</span> :
-  <span className="app-Text"></span>
+  <span className="app-Translate">{children}</span> :
+  <span className="app-Translate"></span>
 )
 
-Text.propTypes = {
+Translate.propTypes = {
   locale: PropTypes.string
 };
 
@@ -23,4 +23,4 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps
-)(Text);
+)(Translate);

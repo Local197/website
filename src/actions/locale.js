@@ -1,22 +1,14 @@
-import cookie from 'react-cookie';
+import { Cookies } from 'react-cookie';
 
-export default {
-  toggleLocale: () => {
-    if (getCookieLocale() === 'en') {
-      cookie.save('reactLocale', 'es');
+const cookie = new Cookies();
+
+export function toggleLocale(locale) {
+    if (locale === 'en') {
+      cookie.set('reactLocale', 'es');
     } else {
-      cookie.save('reactLocale', 'en');
+      cookie.set('reactLocale', 'en');
     }
-    AppDispatcher.dispatch({
-      actionType: 'LOCALE_CHANGE',
+    return ({
+      type: 'LOCALE_CHANGE',
     });
-  },
-};
-
-function getCookieLocale() {
-  const locale = cookie ? cookie.load('reactLocale') : 'en';
-  if (locale === 'en' || locale === 'es') {
-    return locale;
   }
-  return 'en';
-}
