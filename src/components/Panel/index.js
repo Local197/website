@@ -39,10 +39,10 @@ export default class Panel extends Component {
                 </Link>
               </div>
               <Translate language="en">
-                <iframe width="100%" height="220" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
+                <iframe width="220" height="220" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
               </Translate>
               <Translate language="es">
-                <iframe width="100%" height="220" src="https://www.youtube.com/embed/iaBCBXy600E" frameBorder="0" allowFullScreen></iframe>
+                <iframe width="220" height="220" src="https://www.youtube.com/embed/iaBCBXy600E" frameBorder="0" allowFullScreen></iframe>
               </Translate>
               <div className="app-Panel-sidebar-links">
                 <Link className="app-Panel-sidebar-link" to="/sign-up">
@@ -66,7 +66,7 @@ export default class Panel extends Component {
                     View our Blog
                   </Translate>
                   <Translate language="es">
-                    Lee nuestro Blog
+                    Lee Nuestro Blog
                   </Translate>
                 </Link>
               </div>
