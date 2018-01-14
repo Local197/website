@@ -19,6 +19,9 @@ export default class Panel extends Component {
           </div>
           { this.props.noSidebar == true ? null :
             <div className="app-Panel-sidebar">
+              <div className="app-Panel-sidebar-links">
+                <p>Sign In</p>
+              </div>
               <Translate language="en">
                 <iframe width="100%" height="220" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
               </Translate>

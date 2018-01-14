@@ -27,9 +27,11 @@
     border: 0;
     color: $white;
     cursor: pointer;
+    flex-grow: 1;
     font-size: $font-paragraph-s;
     outline: none;
-    padding: 0.75em 2em;
+    padding: 0.75em 0.2em;
+    text-align: center;
     text-decoration: none;
   }
 

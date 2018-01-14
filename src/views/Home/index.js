@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 
 import Panel from 'components/Panel';
-import Button from 'components/Button';
-import HeaderContainer from 'containers/HeaderContainer';
 import Translate from 'containers/Translate';
 
 require('./index.scss');

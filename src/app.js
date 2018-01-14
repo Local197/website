@@ -9,9 +9,15 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 import reducer from './reducers';
-import Home from 'components/Home';
 import Footer from 'components/Footer';
-import AboutUs from 'components/AboutUs';
+import AboutUs from 'views/AboutUs';
+import AreaStandards from 'views/AreaStandards';
+import Contractors from 'views/Contractors';
+import Home from 'views/Home';
+import Members from 'views/Members';
+import PoliticalCorner from 'views/PoliticalCorner';
+import Training from 'views/Training';
+import WorkerAbuse from 'views/WorkerAbuse';
 
 require('./app.scss');
 
@@ -27,8 +33,33 @@ render((
           component={Home}>
         </Route>
         <Route
+          exact
           path="/about-us"
           component={AboutUs}>
+        </Route>
+        <Route
+          path="/area-standards"
+          component={AreaStandards}>
+        </Route>
+        <Route
+          path="/contractors"
+          component={Contractors}>
+        </Route>
+        <Route
+          path="/members"
+          component={Members}>
+        </Route>
+        <Route
+          path="/political-corner"
+          component={PoliticalCorner}>
+        </Route>
+        <Route
+          path="/training"
+          component={Training}>
+        </Route>
+        <Route
+          path="/worker-abuse"
+          component={WorkerAbuse}>
         </Route>
         <Footer />
       </div>

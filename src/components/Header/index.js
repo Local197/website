@@ -42,10 +42,58 @@ export default class Header extends Component {
           </NavLink>
           <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/about-us">
             <Translate language="en">
-              About Us
+              About
             </Translate>
             <Translate language="es">
-              Sobre Nosotros
+              Acerca De
+            </Translate>
+          </NavLink>
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/members">
+            <Translate language="en">
+              Members
+            </Translate>
+            <Translate language="es">
+              Miembros
+            </Translate>
+          </NavLink>
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/contractors">
+            <Translate language="en">
+              Contractors
+            </Translate>
+            <Translate language="es">
+              Contratistas
+            </Translate>
+          </NavLink>
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/political-corner">
+            <Translate language="en">
+              Politics
+            </Translate>
+            <Translate language="es">
+              Politicas
+            </Translate>
+          </NavLink>
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/area-standards">
+            <Translate language="en">
+              Standards
+            </Translate>
+            <Translate language="es">
+              Estandares
+            </Translate>
+          </NavLink>
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/worker-abuse">
+            <Translate language="en">
+              Abuse
+            </Translate>
+            <Translate language="es">
+              Abuso
+            </Translate>
+          </NavLink>
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/training">
+            <Translate language="en">
+              Training
+            </Translate>
+            <Translate language="es">
+              Entrenamiento
             </Translate>
           </NavLink>
         </div>
