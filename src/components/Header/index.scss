@@ -2,7 +2,7 @@
 
 .app-Header {
   &-top {
-    color: lighten($black, 20%);
+    color: $white;
     display: flex;
     flex-flow: row;
     margin: 0 auto;
@@ -15,7 +15,7 @@
   }
 
   &-nav {
-    background-color: $red;
+    background-color: $brown;
     display: flex;
     flex-flow: row;
     margin: 0 auto;
@@ -23,10 +23,30 @@
     position: relative;
   }
 
+  %base-link {
+    border: 0;
+    color: $white;
+    cursor: pointer;
+    font-size: $font-paragraph-s;
+    outline: none;
+    padding: 0.75em 2em;
+    text-decoration: none;
+  }
+
+  &-link {
+    @extend %base-link;
+    background-color: $brown;
+
+    &-active {
+      @extend %base-link;
+      background-color: darken($brown, 5%);
+    }
+  }
+
   &-container {
     background-attachment: fixed;
     background-image: url('../../assets/header.jpg');
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -55,13 +75,13 @@
   &-logo {
     margin: 15px auto 0;
     position: relative;
-    width: 100px;
+    width: 75px;
 
     > img {
       left: 0;
       position: absolute;
       top: 0;
-      width: 105px;
+      width: 78px;
     }
   }
 }

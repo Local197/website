@@ -25,9 +25,11 @@ export default class Panel extends Component {
               <Translate language="es">
                 <iframe width="100%" height="220" src="https://www.youtube.com/embed/iaBCBXy600E" frameBorder="0" allowFullScreen></iframe>
               </Translate>
-              <p>join our movement</p>
-              <p>facebook</p>
-              <p>blog</p>
+              <div className="app-Panel-sidebar-links">
+                <p>join our movement</p>
+                <p>facebook</p>
+                <p>blog</p>
+              </div>
             </div>
           }
         </div>

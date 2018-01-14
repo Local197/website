@@ -28,7 +28,6 @@ h2 {
   font-family: $font-paralucent;
   font-size: $font-heading-s;
   font-weight: 300;
-  text-align: center;
 }
 
 h3 {
@@ -36,15 +35,6 @@ h3 {
   font-size: $font-paragraph-l;
   font-weight: 300;
   text-align: center;
-}
-
-img {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-img[data-src] {
-  opacity: 0;
 }
 
 .app {

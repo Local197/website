@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom'
 
 import Panel from 'components/Panel';
 import Button from 'components/Button';
@@ -14,7 +13,6 @@ export default class Home extends Component {
     return(
       <div className="app-Home">
         <Panel>
-          <Link to="/about-us">About Us </Link>
           <h2>
             <Translate language="en">This is who we are:</Translate>
             <Translate language="es">Esto es quienes somos:</Translate>
