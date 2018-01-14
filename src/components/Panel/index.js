@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Translate from 'containers/Translate';
 import HeaderContainer from 'containers/HeaderContainer';
@@ -21,22 +21,22 @@ export default class Panel extends Component {
           { this.props.noSidebar == true ? null :
             <div className="app-Panel-sidebar">
               <div>
-                <NavLink className="app-Panel-sidebar-link" activeClassName="app-Panel-sidebar-link-active" to="/sign-in">
+                <Link className="app-Panel-sidebar-link" to="/sign-in">
                   <Translate language="en">
                     Login
                   </Translate>
                   <Translate language="es">
                     Ingresar
                   </Translate>
-                </NavLink>
-                <NavLink className="app-Panel-sidebar-link" activeClassName="app-Panel-sidebar-link-active" to="/sign-up">
+                </Link>
+                <Link className="app-Panel-sidebar-link" to="/sign-up">
                   <Translate language="en">
                     Sign Up
                   </Translate>
                   <Translate language="es">
                     Reg&iacute;strarse
                   </Translate>
-                </NavLink>
+                </Link>
               </div>
               <Translate language="en">
                 <iframe width="100%" height="220" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
@@ -45,9 +45,30 @@ export default class Panel extends Component {
                 <iframe width="100%" height="220" src="https://www.youtube.com/embed/iaBCBXy600E" frameBorder="0" allowFullScreen></iframe>
               </Translate>
               <div className="app-Panel-sidebar-links">
-                <p>join our movement</p>
-                <p>facebook</p>
-                <p>blog</p>
+                <Link className="app-Panel-sidebar-link" to="/sign-up">
+                  <Translate language="en">
+                    Join our Movement
+                  </Translate>
+                  <Translate language="es">
+                    Unete al Movimiento
+                  </Translate>
+                </Link>
+                <Link className="app-Panel-sidebar-link" to="/sign-up">
+                  <Translate language="en">
+                    Facebook
+                  </Translate>
+                  <Translate language="es">
+                    Facebook
+                  </Translate>
+                </Link>
+                <Link className="app-Panel-sidebar-link" to="/sign-up">
+                  <Translate language="en">
+                    View our Blog
+                  </Translate>
+                  <Translate language="es">
+                    Lee nuestro Blog
+                  </Translate>
+                </Link>
               </div>
             </div>
           }
