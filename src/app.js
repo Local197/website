@@ -9,7 +9,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 import reducer from './reducers';
-import Home from 'containers/Home';
+import Home from 'components/Home';
+import Footer from 'components/Footer';
+import AboutUs from 'components/AboutUs';
 
 require('./app.scss');
 
@@ -18,8 +20,18 @@ const store = createStore(reducer, applyMiddleware(thunk));
 render((
   <Provider store={store}>
     <Router>
-      <Route path="/" component={Home}>
-      </Route>
+      <div className="app">
+        <Route
+          exact
+          path="/"
+          component={Home}>
+        </Route>
+        <Route
+          path="/about-us"
+          component={AboutUs}>
+        </Route>
+        <Footer />
+      </div>
     </Router>
   </Provider>
 ), document.getElementById('root'));

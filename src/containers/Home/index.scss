@@ -1,9 +1,0 @@
-@import 'stylesheets/variables';
-
-.app-Home {
-  margin: 0 2em 2em;
-
-  @include breakpoint(small) {
-    margin: 0;
-  };
-}
