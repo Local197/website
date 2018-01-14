@@ -5,37 +5,48 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 60px;
+  height: 40px;
   background-color: $brown;
   color: #fff;
+  padding: 0 10px;
 
   &-content {
-    margin: 20px;
+    margin: 10px auto;
+    max-width: 1185px;
     position: relative;
 
     &-copy {
       display: block;
-      font-size: $font-paragraph-s;
+      font-size: $font-paragraph-xs;
       margin-left: auto;
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 20px;
+      top: 3px;
+
+      @include breakpoint(small) {
+        right: 5px;
+      }
     }
 
     &-social {
-      max-width: 160px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      margin-left: 20px;
+      max-width: 160px;
 
-      & a {
+      @include breakpoint(small) {
+        margin-left: 0;
+      }
+
+      > a {
         max-height: 20px;
 
-        & svg {
-          fill: #fff;
-          width: 20px;
+        > svg {
           cursor: pointer;
+          fill: $white;
           transition: filter 0.2s linear;
+          width: 20px;
 
           &:hover {
             filter: drop-shadow($shadow-filter);
