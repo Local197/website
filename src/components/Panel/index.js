@@ -23,10 +23,10 @@ export default class Panel extends Component {
               <div>
                 <NavLink className="app-Panel-sidebar-link" activeClassName="app-Panel-sidebar-link-active" to="/sign-in">
                   <Translate language="en">
-                    Sign In
+                    Login
                   </Translate>
                   <Translate language="es">
-                    Estandares
+                    Ingresar
                   </Translate>
                 </NavLink>
                 <NavLink className="app-Panel-sidebar-link" activeClassName="app-Panel-sidebar-link-active" to="/sign-up">
@@ -34,7 +34,7 @@ export default class Panel extends Component {
                     Sign Up
                   </Translate>
                   <Translate language="es">
-                    Estandares
+                    Reg&iacute;strarse
                   </Translate>
                 </NavLink>
               </div>
