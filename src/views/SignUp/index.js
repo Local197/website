@@ -5,11 +5,11 @@ import Translate from 'containers/Translate';
 
 require('./index.scss');
 
-export default class Members extends Component {
+export default class SignUp extends Component {
 
   render() {
     return(
-      <div className="app-Members">
+      <div className="app-SignUp">
         <Panel noSidebar>
           <h2>
             <Translate language="en">This is the members</Translate>

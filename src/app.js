@@ -14,7 +14,7 @@ import AboutUs from 'views/AboutUs';
 import AreaStandards from 'views/AreaStandards';
 import Contractors from 'views/Contractors';
 import Home from 'views/Home';
-import Members from 'views/Members';
+import SignUp from 'views/SignUp';
 import PoliticalCorner from 'views/PoliticalCorner';
 import Training from 'views/Training';
 import WorkerAbuse from 'views/WorkerAbuse';
@@ -34,7 +34,7 @@ render((
         </Route>
         <Route
           exact
-          path="/about-us"
+          path="/about"
           component={AboutUs}>
         </Route>
         <Route
@@ -46,11 +46,15 @@ render((
           component={Contractors}>
         </Route>
         <Route
-          path="/members"
-          component={Members}>
+          path="/member-benefits"
+          component={SignUp}>
         </Route>
         <Route
-          path="/political-corner"
+          path="/sign-up"
+          component={SignUp}>
+        </Route>
+        <Route
+          path="/politics"
           component={PoliticalCorner}>
         </Route>
         <Route
@@ -58,7 +62,7 @@ render((
           component={Training}>
         </Route>
         <Route
-          path="/worker-abuse"
+          path="/abuse"
           component={WorkerAbuse}>
         </Route>
         <Footer />

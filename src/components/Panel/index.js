@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Translate from 'containers/Translate';
 import HeaderContainer from 'containers/HeaderContainer';
@@ -19,8 +20,23 @@ export default class Panel extends Component {
           </div>
           { this.props.noSidebar == true ? null :
             <div className="app-Panel-sidebar">
-              <div className="app-Panel-sidebar-links">
-                <p>Sign In</p>
+              <div>
+                <NavLink className="app-Panel-sidebar-link" activeClassName="app-Panel-sidebar-link-active" to="/sign-in">
+                  <Translate language="en">
+                    Sign In
+                  </Translate>
+                  <Translate language="es">
+                    Estandares
+                  </Translate>
+                </NavLink>
+                <NavLink className="app-Panel-sidebar-link" activeClassName="app-Panel-sidebar-link-active" to="/sign-up">
+                  <Translate language="en">
+                    Sign Up
+                  </Translate>
+                  <Translate language="es">
+                    Estandares
+                  </Translate>
+                </NavLink>
               </div>
               <Translate language="en">
                 <iframe width="100%" height="220" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>

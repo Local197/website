@@ -40,20 +40,12 @@ export default class Header extends Component {
               Entrada
             </Translate>
           </NavLink>
-          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/about-us">
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/about">
             <Translate language="en">
               About
             </Translate>
             <Translate language="es">
               Acerca De
-            </Translate>
-          </NavLink>
-          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/members">
-            <Translate language="en">
-              Members
-            </Translate>
-            <Translate language="es">
-              Miembros
             </Translate>
           </NavLink>
           <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/contractors">
@@ -64,7 +56,7 @@ export default class Header extends Component {
               Contratistas
             </Translate>
           </NavLink>
-          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/political-corner">
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/politics">
             <Translate language="en">
               Politics
             </Translate>
@@ -80,7 +72,7 @@ export default class Header extends Component {
               Estandares
             </Translate>
           </NavLink>
-          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/worker-abuse">
+          <NavLink className="app-Header-link" activeClassName="app-Header-link-active" to="/abuse">
             <Translate language="en">
               Abuse
             </Translate>
