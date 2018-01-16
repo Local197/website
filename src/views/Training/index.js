@@ -6,11 +6,11 @@ import Translate from 'containers/Translate';
 
 require('./index.scss');
 
-export default class Training extends Component {
+export default class TrainingView extends Component {
 
   render() {
     return(
-      <div className="app-Training">
+      <div className="app-TrainingView">
         <Panel noSidebar>
           <Text>
             <h2>
@@ -81,7 +81,7 @@ export default class Training extends Component {
                 Important: In order to receive this TVC card, you will have to take any certification or qualification class first, and your union card has to be current. Pictures are taken at a training center near you. GET YOURS NOW!
               </Translate>
             </p>
-            <img className="app-Training-image" src={require('assets/training.png')} />
+            <img className="app-TrainingView-image" src={require('assets/training.png')} />
           </Text>
         </Panel>
       </div>

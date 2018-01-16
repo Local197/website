@@ -6,11 +6,11 @@ import Translate from 'containers/Translate';
 
 require('./index.scss');
 
-export default class Home extends Component {
+export default class HomeView extends Component {
 
   render() {
     return(
-      <div className="app-Home">
+      <div className="app-HomeView">
         <Panel>
           <Text>
             <h2>

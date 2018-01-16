@@ -10,14 +10,14 @@ import { Provider } from 'react-redux';
 
 import reducer from './reducers';
 import Footer from 'components/Footer';
-import AboutUs from 'views/AboutUs';
-import AreaStandards from 'views/AreaStandards';
-import Contractors from 'views/Contractors';
-import Home from 'views/Home';
-import SignUp from 'views/SignUp';
-import PoliticalCorner from 'views/PoliticalCorner';
-import Training from 'views/Training';
-import WorkerAbuse from 'views/WorkerAbuse';
+import AboutUsView from 'views/AboutUs';
+import AreaStandardsView from 'views/AreaStandards';
+import ContractorsView from 'views/Contractors';
+import HomeView from 'views/Home';
+import SignUpView from 'views/SignUp';
+import PoliticalCornerView from 'views/PoliticalCorner';
+import TrainingView from 'views/Training';
+import WorkerAbuseView from 'views/WorkerAbuse';
 
 require('./app.scss');
 
@@ -30,40 +30,40 @@ render((
         <Route
           exact
           path="/"
-          component={Home}>
+          component={HomeView}>
         </Route>
         <Route
           exact
           path="/about"
-          component={AboutUs}>
+          component={AboutUsView}>
         </Route>
         <Route
           path="/area-standards"
-          component={AreaStandards}>
+          component={AreaStandardsView}>
         </Route>
         <Route
           path="/contractors"
-          component={Contractors}>
+          component={ContractorsView}>
         </Route>
         <Route
           path="/member-benefits"
-          component={SignUp}>
+          component={SignUpView}>
         </Route>
         <Route
           path="/sign-up"
-          component={SignUp}>
+          component={SignUpView}>
         </Route>
         <Route
           path="/politics"
-          component={PoliticalCorner}>
+          component={PoliticalCornerView}>
         </Route>
         <Route
           path="/training"
-          component={Training}>
+          component={TrainingView}>
         </Route>
         <Route
           path="/abuse"
-          component={WorkerAbuse}>
+          component={WorkerAbuseView}>
         </Route>
         <Footer />
       </div>

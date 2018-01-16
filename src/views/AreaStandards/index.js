@@ -5,11 +5,11 @@ import Translate from 'containers/Translate';
 
 require('./index.scss');
 
-export default class AreaStandards extends Component {
+export default class AreaStandardsView extends Component {
 
   render() {
     return(
-      <div className="app-AreaStandards">
+      <div className="app-AreaStandardsView">
         <Panel noSidebar>
           <h2>
             <Translate language="en">This is the area standards</Translate>

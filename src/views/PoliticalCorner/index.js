@@ -5,11 +5,11 @@ import Translate from 'containers/Translate';
 
 require('./index.scss');
 
-export default class PoliticalCorner extends Component {
+export default class PoliticalCornerView extends Component {
 
   render() {
     return(
-      <div className="app-PoliticalCorner">
+      <div className="app-PoliticalCornerView">
         <Panel noSidebar>
           <h2>
             <Translate language="en">This is the politics</Translate>

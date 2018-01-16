@@ -1,1 +1,12 @@
 @import 'stylesheets/variables';
+
+.app-SignUpView {
+  &-container {
+    display: flex;
+    flex-flow: row;
+
+    @include breakpoint(small) {
+      flex-flow: column;
+    }
+  }
+}
