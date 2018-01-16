@@ -81,6 +81,7 @@ export default class Training extends Component {
                 Important: In order to receive this TVC card, you will have to take any certification or qualification class first, and your union card has to be current. Pictures are taken at a training center near you. GET YOURS NOW!
               </Translate>
             </p>
+            <img className="app-Training-image" src={require('assets/training.png')} />
           </Text>
         </Panel>
       </div>
