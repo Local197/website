@@ -11,10 +11,7 @@ export default class WorkerAbuseView extends Component {
     return(
       <div className="app-WorkerAbuseView">
         <Panel noSidebar>
-          <h2>
-            <Translate language="en">This is the worker abuse</Translate>
-          </h2>
-          <p>supp</p>
+          <p>coming soon.</p>
         </Panel>
       </div>
     )

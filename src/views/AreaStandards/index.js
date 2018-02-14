@@ -11,10 +11,7 @@ export default class AreaStandardsView extends Component {
     return(
       <div className="app-AreaStandardsView">
         <Panel noSidebar>
-          <h2>
-            <Translate language="en">This is the area standards</Translate>
-          </h2>
-          <p>supp</p>
+          <p>coming soon.</p>
         </Panel>
       </div>
     )

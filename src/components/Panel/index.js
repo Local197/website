@@ -15,29 +15,31 @@ export default class Panel extends Component {
           <HeaderContainer />
         }
         <div className="app-Panel-container">
-          <div className="app-Panel-content">
+          <div className={`app-Panel-content ${this.props.className}`}>
             {this.props.children}
           </div>
           { this.props.noSidebar == true ? null :
             <div className="app-Panel-sidebar">
-              <div>
-                <Link className="app-Panel-sidebar-link" to="/sign-in">
-                  <Translate language="en">
-                    Login
-                  </Translate>
-                  <Translate language="es">
-                    Ingresar
-                  </Translate>
-                </Link>
-                <Link className="app-Panel-sidebar-link" to="/sign-up">
-                  <Translate language="en">
-                    Sign Up
-                  </Translate>
-                  <Translate language="es">
-                    Reg&iacute;strarse
-                  </Translate>
-                </Link>
-              </div>
+              {
+              // <div>
+              //   <Link className="app-Panel-sidebar-link" to="/">
+              //     <Translate language="en">
+              //       Login
+              //     </Translate>
+              //     <Translate language="es">
+              //       Ingresar
+              //     </Translate>
+              //   </Link>
+              //   <Link className="app-Panel-sidebar-link" to="/sign-up">
+              //     <Translate language="en">
+              //       Sign Up
+              //     </Translate>
+              //     <Translate language="es">
+              //       Reg&iacute;strarse
+              //     </Translate>
+              //   </Link>
+              // </div>
+              }
               <Translate language="en">
                 <iframe width="220" height="220" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
               </Translate>
@@ -45,30 +47,32 @@ export default class Panel extends Component {
                 <iframe width="220" height="220" src="https://www.youtube.com/embed/iaBCBXy600E" frameBorder="0" allowFullScreen></iframe>
               </Translate>
               <div className="app-Panel-sidebar-links">
-                <Link className="app-Panel-sidebar-link" to="/sign-up">
-                  <Translate language="en">
-                    Join our Movement
-                  </Translate>
-                  <Translate language="es">
-                    Unete al Movimiento
-                  </Translate>
-                </Link>
-                <Link className="app-Panel-sidebar-link" to="/sign-up">
+                {
+                // <Link className="app-Panel-sidebar-link" to="/">
+                //   <Translate language="en">
+                //     Join our Movement
+                //   </Translate>
+                //   <Translate language="es">
+                //     Unete al Movimiento
+                //   </Translate>
+                // </Link>
+                }
+                <a className="app-Panel-sidebar-link" href="https://www.facebook.com/UBC197/" target="__blank">
                   <Translate language="en">
                     Facebook
                   </Translate>
                   <Translate language="es">
                     Facebook
                   </Translate>
-                </Link>
-                <Link className="app-Panel-sidebar-link" to="/sign-up">
+                </a>
+                <a className="app-Panel-sidebar-link" href="http://blog.197-carpenters.com/" target="__blank">
                   <Translate language="en">
                     View our Blog
                   </Translate>
                   <Translate language="es">
                     Lee Nuestro Blog
                   </Translate>
-                </Link>
+                </a>
               </div>
             </div>
           }

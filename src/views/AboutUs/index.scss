@@ -1,1 +1,28 @@
 @import 'stylesheets/variables';
+
+.app-AboutUsView {
+  display: flex;
+  flex-flow: row;
+
+  @include breakpoint(small) {
+    flex-flow: column;
+  }
+
+  &-main {
+    flex-grow: 3;
+
+    @include breakpoint(small) {
+      order: 2;
+    }
+  }
+
+  &-side {
+    max-width: 250px;
+
+    @include breakpoint(small) {
+      max-width: none;
+      order: 1;
+    }
+  }
+
+}

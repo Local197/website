@@ -11,10 +11,7 @@ export default class PoliticalCornerView extends Component {
     return(
       <div className="app-PoliticalCornerView">
         <Panel noSidebar>
-          <h2>
-            <Translate language="en">This is the politics</Translate>
-          </h2>
-          <p>supp</p>
+          <p>coming soon.</p>
         </Panel>
       </div>
     )
