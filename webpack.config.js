@@ -38,7 +38,7 @@ module.exports = {
 
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.scss$/,
         use: extractSass.extract({

@@ -7,6 +7,8 @@ import {
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import Amplify from 'aws-amplify';
+import aws_exports from 'aws-exports';
 
 import reducer from './reducers';
 import Footer from 'components/Footer';
@@ -15,11 +17,13 @@ import AreaStandardsView from 'views/AreaStandards';
 import ContractorsView from 'views/Contractors';
 import HomeView from 'views/Home';
 import SignUpView from 'views/SignUp';
+import SignInView from 'views/SignIn';
 import PoliticalCornerView from 'views/PoliticalCorner';
 import TrainingView from 'views/Training';
 import WorkerAbuseView from 'views/WorkerAbuse';
 
 require('./app.scss');
+Amplify.configure(aws_exports);
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -52,6 +56,10 @@ render((
         <Route
           path="/sign-up"
           component={SignUpView}>
+        </Route>
+        <Route
+          path="/sign-in"
+          component={SignInView}>
         </Route>
         <Route
           path="/politics"

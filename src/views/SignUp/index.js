@@ -27,10 +27,9 @@ export default class SignUpView extends Component {
                   Aplicables a la uni&oacute;n deber&iacute;an ir en persona a la oficina para una entrevista. La entrevista se consigue por tel&eacute;fono, llamando al 301-735-6660. Hablar con un representante del consejo o dejar un mensaje espec&iacute;fico. <br/> <br/> El horario es Lunes - Viernes de las 7:00AM - 4:00PM.
                 </Translate>
               </p>
-
               <p>
                 <Translate language="en">
-                  After joining, you will be given a union ID number. You can join the Local 197 online by signing up with that numberhere. By joining you will be able to access the following:
+                  After joining, you will be given a union ID number. You can join the Local 197 online by signing up with that number here. By joining you will be able to access the following:
                 </Translate>
                 <Translate language="es">
                   Despu&eacute;s de unirse, se le dar&aacute; un n&uacute;mero de identificaci&oacute;n del sindicato. Puede unirse al Local 197 en l&iacute;nea registr&aacute;ndose con ese n&uacute;mero aqu&iacute;. Al unirse, podr&aacute; acceder a lo siguiente:

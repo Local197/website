@@ -1,12 +1,24 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import { Authenticator, Greetings } from 'aws-amplify-react';
 
+import Button from 'components/Button';
 import Translate from 'containers/Translate';
 import HeaderContainer from 'containers/HeaderContainer';
+
+import { Auth } from 'aws-amplify';
 
 require('./index.scss');
 
 export default class Panel extends Component {
+
+  constructor(props) {
+    super(props);
+    this._generateAuthLinks = this._generateAuthLinks.bind(this);
+    this._signOutSubmit = this._signOutSubmit.bind(this);
+
+    Auth.currentUserInfo().then(user => this.setState(user));
+  }
 
   render() {
     return(
@@ -20,26 +32,7 @@ export default class Panel extends Component {
           </div>
           { this.props.noSidebar == true ? null :
             <div className="app-Panel-sidebar">
-              {
-              // <div>
-              //   <Link className="app-Panel-sidebar-link" to="/">
-              //     <Translate language="en">
-              //       Login
-              //     </Translate>
-              //     <Translate language="es">
-              //       Ingresar
-              //     </Translate>
-              //   </Link>
-              //   <Link className="app-Panel-sidebar-link" to="/sign-up">
-              //     <Translate language="en">
-              //       Sign Up
-              //     </Translate>
-              //     <Translate language="es">
-              //       Reg&iacute;strarse
-              //     </Translate>
-              //   </Link>
-              // </div>
-              }
+              {this._generateAuthLinks()}
               <Translate language="en">
                 <iframe width="220" height="220" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
               </Translate>
@@ -79,5 +72,57 @@ export default class Panel extends Component {
         </div>
       </div>
     );
+  }
+
+  _generateAuthLinks() {
+    if (this.props.authState == 'signedIn') {
+      return (
+        <div style={{textAlign: "center"}}>
+          <div className="app-Panel-sidebar-auth">
+            <Translate language="en">
+              Welcome
+            </Translate>
+            <Translate language="es">
+              ¡Bienvenido
+            </Translate>
+            <span> {this.state &&
+                        this.state.attributes &&
+                        this.state.attributes.name ?
+                        this.state.attributes.name :
+                        this.props.authData.username}
+            !</span>
+          </div>
+          <button
+            onClick={this._signOutSubmit}
+            className="app-Panel-sidebar-button">
+            Logout
+          </button>
+        </div>
+      );
+    }
+    return (
+      <div>
+        <Link className="app-Panel-sidebar-link" to="/sign-in">
+          <Translate language="en">
+            Login
+          </Translate>
+          <Translate language="es">
+            Ingresar
+          </Translate>
+        </Link>
+        <Link className="app-Panel-sidebar-link" to="/sign-up">
+          <Translate language="en">
+            Sign Up
+          </Translate>
+          <Translate language="es">
+            Reg&iacute;strarse
+          </Translate>
+        </Link>
+      </div>
+    );
+  }
+
+  _signOutSubmit() {
+    Auth.signOut();
   }
 }

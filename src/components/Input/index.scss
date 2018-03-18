@@ -1,0 +1,26 @@
+@import 'stylesheets/variables';
+
+.app-Input {
+  margin: 5px 0;
+
+  &-label {
+    border-bottom: 1px solid $brown;
+    color: $brown;
+    font-size: 0.8em;
+  }
+
+  &-field {
+    border: 1px solid lighten($brown, 20%);
+    font-size: 1em;
+    height: 46px;
+    margin-top: 5px;
+    padding: 0 5px;
+    text-align: center;
+    transition: all 0.15s ease-in-out;
+
+    &:focus {
+      border: 1px solid $brown;
+      outline: none;
+    }
+  }
+}

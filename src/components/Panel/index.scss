@@ -33,6 +33,7 @@
     display: flex;
     flex-flow: column;
     min-width: 240px;
+    overflow: hidden;
 
     iframe {
       padding: 0 10px;
@@ -57,6 +58,36 @@
         background-color: $brown;
         color: $white;
       }
+    }
+
+    &-button {
+      background-color: transparent;
+      border: 1px solid $brown;
+      color: $brown;
+      cursor: pointer;
+      display: block;
+      flex-grow: 1;
+      font-size: $font-paragraph-s;
+      margin: 10px;
+      outline: none;
+      padding: 0.75em 0.2em;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.15s ease-in-out;
+      width: 220px;
+
+      &:hover {
+        background-color: $brown;
+        color: $white;
+      }
+    }
+
+    &-auth {
+      border-bottom: 1px solid $brown;
+      color: $brown;
+      display: inline-block;
+      font-size: 1em;
+      margin: 10px 0 auto;
     }
   }
 
