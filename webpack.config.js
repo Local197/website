@@ -19,7 +19,7 @@ const sourceFolder = path.resolve(__dirname, 'src');
 module.exports = {
   entry: './app.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   context: path.join(__dirname, 'src'),
