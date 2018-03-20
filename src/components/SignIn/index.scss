@@ -3,10 +3,10 @@
 .app-SignIn {
   background-color: $light-gray;
   font-size: 0.8em;
-  margin: 0 auto;
-  padding: 5px;
+  margin: 10px auto;
+  padding: 0 10px;
   text-align: left;
-  width: 178px;
+  width: calc(100% - 20px);
 
   @include breakpoint(small) {
     margin: 0 auto;
@@ -18,12 +18,34 @@
   }
 
   &-inputGroup {
+    border-top: 1px solid $brown;
     text-align: center;
+  }
+
+  &-link {
+    background-color: transparent;
+    border: 1px solid $brown;
+    color: $brown;
+    cursor: pointer;
+    display: block;
+    flex-grow: 1;
+    font-size: $font-paragraph-s;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 0.75em 0.2em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      background-color: $brown;
+      color: $white;
+    }
   }
 
   &-status {
     border-top: 1px solid $brown;
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 5px;
   }
 }

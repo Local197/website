@@ -1,7 +1,11 @@
 @import 'stylesheets/variables';
 
 .app-Input {
-  margin: 5px 0;
+  margin: 10px 0;
+
+  > input {
+    width: calc(100% - 12px);
+  }
 
   &-label {
     border-bottom: 1px solid $brown;

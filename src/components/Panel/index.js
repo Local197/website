@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import {
+  Route,
+  Switch
+} from 'react-router-dom';
 import { Authenticator, Greetings } from 'aws-amplify-react';
 
 import Button from 'components/Button';
+import SignIn from 'components/SignIn';
+import SignUp from 'components/SignUp';
 import Translate from 'containers/Translate';
 import HeaderContainer from 'containers/HeaderContainer';
 
@@ -102,22 +108,15 @@ export default class Panel extends Component {
     }
     return (
       <div>
-        <Link className="app-Panel-sidebar-link" to="/sign-in">
-          <Translate language="en">
-            Login
-          </Translate>
-          <Translate language="es">
-            Ingresar
-          </Translate>
-        </Link>
-        <Link className="app-Panel-sidebar-link" to="/sign-up">
-          <Translate language="en">
-            Sign Up
-          </Translate>
-          <Translate language="es">
-            Reg&iacute;strarse
-          </Translate>
-        </Link>
+        <Route
+          path="/sign-up"
+          component={SignUp}>
+        </Route>
+        <Route
+          exact
+          path="/"
+          component={SignIn}>
+        </Route>
       </div>
     );
   }

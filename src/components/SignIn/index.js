@@ -31,6 +31,14 @@ export default class SignIn extends Component {
   render() {
     return(
       <div className="app-SignIn">
+        <Link className="app-SignIn-link" to="/sign-up">
+          <Translate language="en">
+            Sign Up
+          </Translate>
+          <Translate language="es">
+            Reg&iacute;strarse
+          </Translate>
+        </Link>
         {this._renderInput()}
         <Text className="app-SignIn-status">
           <Translate language="en">

@@ -14,10 +14,9 @@ import reducer from './reducers';
 import Footer from 'components/Footer';
 import AboutUsView from 'views/AboutUs';
 import AreaStandardsView from 'views/AreaStandards';
+import SignUpView from 'views/SignUp';
 import ContractorsView from 'views/Contractors';
 import HomeView from 'views/Home';
-import SignUpView from 'views/SignUp';
-import SignInView from 'views/SignIn';
 import PoliticalCornerView from 'views/PoliticalCorner';
 import TrainingView from 'views/Training';
 import WorkerAbuseView from 'views/WorkerAbuse';
@@ -33,7 +32,7 @@ render((
       <div className="app">
         <Route
           exact
-          path="/"
+          path="/(|sign-in|sign-up)/"
           component={HomeView}>
         </Route>
         <Route
@@ -52,14 +51,6 @@ render((
         <Route
           path="/member-benefits"
           component={SignUpView}>
-        </Route>
-        <Route
-          path="/sign-up"
-          component={SignUpView}>
-        </Route>
-        <Route
-          path="/sign-in"
-          component={SignInView}>
         </Route>
         <Route
           path="/politics"

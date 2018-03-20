@@ -32,7 +32,7 @@
     color: $black;
     display: flex;
     flex-flow: column;
-    min-width: 240px;
+    width: 300px;
     overflow: hidden;
 
     iframe {
@@ -47,7 +47,7 @@
       display: block;
       flex-grow: 1;
       font-size: $font-paragraph-s;
-      margin: 10px;
+      margin: 11px;
       outline: none;
       padding: 0.75em 0.2em;
       text-align: center;

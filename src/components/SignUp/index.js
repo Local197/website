@@ -24,7 +24,6 @@ export default class SignUp extends Component {
     this._renderInput = this._renderInput.bind(this);
     this._generateSignUp = this._generateSignUp.bind(this);
     this._generateConfirm = this._generateConfirm.bind(this);
-    this._generateSignIn = this._generateSignIn.bind(this);
 
     this.state = {
       username: '',
@@ -39,15 +38,23 @@ export default class SignUp extends Component {
   render() {
     return(
       <div className="app-SignUp">
-          {this._renderInput()}
-          <Text className="app-SignUp-status">
-            <Translate language="en">
-              {this._getStatusMessage(this.state.stage).en}
-            </Translate>
-            <Translate language="es">
-              {this._getStatusMessage(this.state.stage).es}
-            </Translate>
-          </Text>
+        <Link className="app-SignUp-link" to="/">
+          <Translate language="en">
+            Login
+          </Translate>
+          <Translate language="es">
+            Ingresar
+          </Translate>
+        </Link>
+        {this._renderInput()}
+        <Text className="app-SignUp-status">
+          <Translate language="en">
+            {this._getStatusMessage(this.state.stage).en}
+          </Translate>
+          <Translate language="es">
+            {this._getStatusMessage(this.state.stage).es}
+          </Translate>
+        </Text>
       </div>
     );
   }
@@ -59,23 +66,8 @@ export default class SignUp extends Component {
       case 3: case 6:
         return this._generateConfirm();
       case 5:
-        return this._generateSignIn()
+        return null
     }
-  }
-
-  _generateSignIn() {
-    return (
-      <div className="app-SignUp-inputGroup">
-        <Link className="app-Panel-sidebar-link" to="/sign-in">
-          <Translate language="en">
-            Login
-          </Translate>
-          <Translate language="es">
-            Ingresar
-          </Translate>
-        </Link>
-      </div>
-    );
   }
 
   _generateSignUp() {
