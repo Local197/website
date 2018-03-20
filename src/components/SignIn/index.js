@@ -86,8 +86,17 @@ export default class SignIn extends Component {
           />
         <Button
           click={this._signInSubmit}
-          className="app-SignIn-button">
-          Login
+          className="app-SignIn-button"
+          disabled={
+            this.state.password == '' ||
+            this.state.email == ''
+          }>
+          <Translate language="en">
+            Login
+          </Translate>
+          <Translate language="es">
+            Ingresar
+          </Translate>
         </Button>
       </div>
     );

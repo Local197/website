@@ -40,10 +40,10 @@ export default class Panel extends Component {
             <div className="app-Panel-sidebar">
               {this._generateAuthLinks()}
               <Translate language="en">
-                <iframe width="205" height="205" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
+                <iframe width="201" height="201" src="https://www.youtube.com/embed/3-X5hCxdaLc" frameBorder="0" allowFullScreen></iframe>
               </Translate>
               <Translate language="es">
-                <iframe width="205" height="205" src="https://www.youtube.com/embed/iaBCBXy600E" frameBorder="0" allowFullScreen></iframe>
+                <iframe width="201" height="201" src="https://www.youtube.com/embed/iaBCBXy600E" frameBorder="0" allowFullScreen></iframe>
               </Translate>
               <div className="app-Panel-sidebar-links">
                 {
