@@ -29,6 +29,7 @@
     "eslint": "^4.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-react": "^7.1.0",
+    "react-docgen-readme": "0.0.1",
     "redux-devtools": "^3.4.1",
     "stylelint": "^8.4.0",
     "stylelint-config-sass-guidelines": "^4.0.1",

@@ -83,6 +83,11 @@ export default class SignIn extends Component {
           content={this.state.password}
           controlFunc={e => this.setState({password: e.target.value})}
           placeholder="Enter Password"
+          onEnter={() => {
+            this.state.password &&
+            this.state.email &&
+            this._signInSubmit()
+          }}
           />
         <Button
           click={this._signInSubmit}

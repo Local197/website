@@ -6,11 +6,11 @@
   margin: 10px auto;
   padding: 0 10px;
   text-align: left;
-  width: calc(100% - 20px);
+  max-width: calc(100% - 20px);
 
   @include breakpoint(small) {
     margin: 0 auto;
-    width: 450px;
+    max-width: 450px;
   };
 
   &-button {

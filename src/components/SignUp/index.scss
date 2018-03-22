@@ -10,7 +10,7 @@
 
   @include breakpoint(small) {
     margin: 0 auto;
-    width: 450px;
+    max-width: 450px;
   };
 
   &-button {

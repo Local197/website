@@ -32,12 +32,21 @@
     color: $black;
     display: flex;
     flex-flow: column;
+    margin: 0 auto;
     overflow: hidden;
     width: 300px;
 
+    @include breakpoint(small) {
+      margin-top: 50px;
+      max-width: 480px;
+      width: calc(100% - 10px);
+    }
+
     iframe {
       margin-bottom: -5px;
-      padding: 0 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: calc(100% - 20px);
     }
 
     &-link {
@@ -75,7 +84,7 @@
       text-align: center;
       text-decoration: none;
       transition: all 0.15s ease-in-out;
-      width: 200px;
+      width: calc(100% - 20px);
 
       &:hover {
         background-color: $brown;
