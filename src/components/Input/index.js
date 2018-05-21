@@ -7,11 +7,38 @@ import Translate from 'containers/Translate';
 require('./index.scss');
 
 /**
- * Class representing an input field
- * @extends Component
+ * Styled input field.
+ * @example
+ * let updateText = (e) => {
+ *  this.setState({field: e.target.value});
+ * }
+ *
+ * <Input
+ *  title="My Title"
+ *  titleEs="Mi Titulo"
+ *  placeholder="Enter text here"
+ *  name="fieldName"
+ *  type="text"
+ *  content={this.state.field}
+ *  controlFunc={updateText}
+ *  onEnter={() => { console.log(this.state.field); }}
+ *  classNAme="app-ClassExample"
+ * />
+ * @reactProps {?string} title - The title of the input field.
+ * @reactProps {?string} titleEs - The title of the input field in spanish.
+ * @reactProps {?string} placeholder - Text to display in the input field when
+ *                                    there is no text.
+ * @reactProps {?string} name - The name of the input field.
+ * @reactProps {?string} type - The type of the input field (text, email, password, etc.)
+ * @reactProps {!Object} content - Text to display in the input field as text.
+ * @reactProps {!function(e: {target: {value: string}}}): void} controlFunc -
+ *                                      Function to update the content prop object.
+ * @reactProps {?function} onEnter - Function to run when the Enter key is pressed in the input field.
+ * @reactProps {?string} className - Class name to add a class to the component for extra styling.
  */
 export default class Input extends Component {
 
+  /** @ignore */
   render() {
     return(
       <div className={`app-Input ${this.props.className}`}>
@@ -38,25 +65,13 @@ export default class Input extends Component {
 }
 
 Input.propTypes = {
-  /** The title of the input field. */
   title: PropTypes.string,
-  /** The title of the input field in spanish. */
   titleEs: PropTypes.string,
-  /** Text to display in the input field when there is no text */
   placeholder: PropTypes.string,
-  /** The name of the input field */
   name: PropTypes.string,
-  /** The type of the input field (text, email, password, etc.) */
-  type: PropTypes.type,
-  /** Text to display in the input field as text. */
+  type: PropTypes.string,
   content: PropTypes.string.isRequired,
-  /**
-  * Function to update the *content* prop variable.
-  * @param e event on change, get the text by with `e.target.value`
-  */
   controlFunc: PropTypes.func.isRequired,
-  /** Function to run when the Enter key is pressed in the input field. */
   onEnter: PropTypes.func,
-  /** Class name to add a class to the component for extra styling. */
   className: PropTypes.string
 }

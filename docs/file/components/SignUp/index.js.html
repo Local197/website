@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">components/SignUp/index.js | Local 197 Webpage</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="This is a library for the Local 197 website components"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Local 197 Webpage"><meta property="twitter:description" content="This is a library for the Local 197 website components"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Local197/website"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#button">Button</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Button/index.js~Button.html">Button</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#footer">Footer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Footer/index.js~Footer.html">Footer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#header">Header</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Header/index.js~Header.html">Header</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#hero">Hero</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Hero/index.js~Hero.html">Hero</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#input">Input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Input/index.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#panel">Panel</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Panel/index.js~Panel.html">Panel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signin">SignIn</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignIn/index.js~SignIn.html">SignIn</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signup">SignUp</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignUp/index.js~SignUp.html">SignUp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snippet">Snippet</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Snippet/index.js~Snippet.html">Snippet</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#text">Text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Text/index.js~Text.html">Text</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">components/SignUp/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, {Component} from &apos;react&apos;;
+
+import Input from &apos;components/Input&apos;;
+import Button from &apos;components/Button&apos;;
+import Text from &apos;components/Text&apos;;
+import Translate from &apos;containers/Translate&apos;;
+
+import { Auth } from &apos;aws-amplify&apos;;
+import { Link } from &apos;react-router-dom&apos;;
+
+require(&apos;./index.scss&apos;);
+
+export default class SignUp extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this._usernameInputChange = this._usernameInputChange.bind(this);
+    this._codeInputChange = this._codeInputChange.bind(this);
+    this._getStatusMessage = this._getStatusMessage.bind(this);
+    this._passwordInputChange = this._passwordInputChange.bind(this);
+    this._forgotPasswordSubmit = this._forgotPasswordSubmit.bind(this);
+    this._changePasswordSubmit = this._changePasswordSubmit.bind(this);
+    this._renderInput = this._renderInput.bind(this);
+    this._generateSignUp = this._generateSignUp.bind(this);
+    this._generateConfirm = this._generateConfirm.bind(this);
+
+    this.state = {
+      username: &apos;&apos;,
+      code: &apos;&apos;,
+      email: &apos;&apos;,
+      password: &apos;&apos;,
+      stage: 1,
+      readyToSubmit: false
+    }
+  }
+
+  render() {
+    return(
+      &lt;div className=&quot;app-SignUp&quot;&gt;
+        &lt;Link className=&quot;app-SignUp-link&quot; to=&quot;/&quot;&gt;
+          &lt;Translate language=&quot;en&quot;&gt;
+            Login
+          &lt;/Translate&gt;
+          &lt;Translate language=&quot;es&quot;&gt;
+            Ingresar
+          &lt;/Translate&gt;
+        &lt;/Link&gt;
+        {this._renderInput()}
+        &lt;Text className=&quot;app-SignUp-status&quot;&gt;
+          &lt;Translate language=&quot;en&quot;&gt;
+            {this._getStatusMessage(this.state.stage).en}
+          &lt;/Translate&gt;
+          &lt;Translate language=&quot;es&quot;&gt;
+            {this._getStatusMessage(this.state.stage).es}
+          &lt;/Translate&gt;
+        &lt;/Text&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _renderInput() {
+    switch(this.state.stage) {
+      case 1: case 2: case 4:
+        return this._generateSignUp();
+      case 3: case 6:
+        return this._generateConfirm();
+      case 5:
+        return null
+    }
+  }
+
+  _generateSignUp() {
+    return (
+      &lt;div className=&quot;app-SignUp-inputGroup&quot;&gt;
+        &lt;Input
+          title=&quot;Union ID&quot;
+          titleEs=&quot;ID de Union&quot;
+          name=&quot;username&quot;
+          type=&quot;text&quot;
+          content={this.state.username}
+          controlFunc={this._usernameInputChange}
+          placeholder=&quot;U-####-####&quot;
+          /&gt;
+        &lt;Button
+          click={this._forgotPasswordSubmit}
+          className=&quot;app-SignUp-button&quot;
+          disabled={!this.state.readyToSubmit}&gt;
+          Email Code
+        &lt;/Button&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _generateConfirm() {
+    return (
+      &lt;div className=&quot;app-SignUp-inputGroup&quot;&gt;
+        &lt;Input
+          title=&quot;Code from Email&quot;
+          titleEs=&quot;Codigo de Email&quot;
+          name=&quot;code&quot;
+          type=&quot;text&quot;
+          content={this.state.code}
+          controlFunc={this._codeInputChange}
+          placeholder=&quot;######&quot;
+          /&gt;
+        &lt;Input
+          title=&quot;New Password&quot;
+          titleEs=&quot;Nueva Contrase&amp;ntilde;a&quot;
+          name=&quot;password&quot;
+          type=&quot;password&quot;
+          content={this.state.password}
+          controlFunc={this._passwordInputChange}
+          placeholder=&quot;Enter Password&quot;
+          /&gt;
+        &lt;Button
+          click={this._changePasswordSubmit}
+          className=&quot;app-SignUp-button&quot;&gt;
+          Set Password
+        &lt;/Button&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _usernameInputChange(e) {
+    const newUsername = e.target.value;
+    if (/^U$/.test(newUsername)) {
+      this.setState({username: e.target.value + &apos;-&apos;});
+    } else if (/^u$/.test(newUsername)) {
+      this.setState({username: &apos;U-&apos;});
+    } else if (/^U-[0-9]{1,3}$/.test(newUsername)) {
+      this.setState({username: e.target.value});
+    } else if (/^U-[0-9]{4}$/.test(newUsername)) {
+      this.setState({username: e.target.value + &apos;-&apos;})
+    } else if (/^U-[0-9]{4}-[0-9]{1,3}$/.test(newUsername)) {
+      this.setState({
+        username: e.target.value,
+        readyToSubmit: false
+      });
+    } else if (/^U-[0-9]{4}-[0-9]{4}$/.test(newUsername)) {
+      this.setState({
+        username: e.target.value,
+        readyToSubmit: true
+      });
+    }
+  }
+
+  _getStatusMessage(stage) {
+    switch (stage) {
+      case 1:
+        return {
+          en: &apos;Enter your Union ID to receive your login code.&apos;,
+          es: &apos;Ingrese su ID de sindicato para recibir su c&#xF3;digo de inicio de sesi&#xF3;n.&apos;
+        }
+      case 2:
+        return {
+          en: &apos;Loading...&apos;,
+          es: &apos;Cargando...&apos;
+        }
+      case 3:
+        return {
+          en: `An email has been sent to ${this.state.email} with a login code.\
+              Please enter the code and choose a new password that is at least \
+              8 characters long, has a number, upper and lowecase letters.`,
+          es: `Se ha enviado un correo electr&#xF3;nico a ${this.state.email} con \
+              un c&#xF3;digo de inicio de sesi&#xF3;n. Ingrese el c&#xF3;digo y elija una \
+              nueva contrase&#xF1;a que sea al menos 8 caracteres de largo, \
+              contiene un n&#xFA;mero y letras may&#xFA;sculas y min&#xFA;sculas.`
+        }
+      case 4:
+        return {
+          en: &apos;Oops! Something went wrong. Make sure you have typed your Union \
+              ID correctly.&apos;,
+          es: &apos;&#xA1;Oh no! Algo sali&#xF3; mal. Aseg&#xFA;rate de haber escrito tu ID de \
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; sindicato correctamente&apos;
+        }
+      case 5:
+       return {
+         en: &apos;Submitted successfully! You can now log in with your new password.&apos;,
+         es: &apos;&#xA1;Enviado con &#xE9;xito! Ahora puede iniciar sesi&#xF3;n con su nueva contrase&#xF1;a.&apos;
+       }
+      case 6:
+        return {
+          en: &apos;Looks like something went wrong...&apos;,
+          es: &apos;Parece que algo nu paso bien...&apos;
+        }
+    }
+  }
+
+  _codeInputChange(e) {
+    this.setState({code: e.target.value});
+  }
+
+  _passwordInputChange(e) {
+    this.setState({password: e.target.value});
+  }
+
+  _forgotPasswordSubmit() {
+    this.setState({
+      stage: 2
+    });
+    Auth.forgotPassword(this.state.username)
+      .then(data =&gt; {
+        this.setState({
+          stage: 3,
+          email: data.CodeDeliveryDetails.Destination
+        });
+      })
+      .catch(() =&gt; { this.setState({stage: 4})});
+  }
+
+  _changePasswordSubmit() {
+    Auth.forgotPasswordSubmit(
+      this.state.username,
+      this.state.code,
+      this.state.password)
+      .then(data =&gt; {
+        console.log(data);
+        Auth.currentAuthenticatedUser().then(data =&gt; console.log(data));
+        this.setState({stage: 5});
+      })
+      .catch(error =&gt; {
+        console.log(error);
+        this.setState({stage: 6});
+      })
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">components/Input/index.js | Local 197 Webpage</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="This is a library for the Local 197 website components"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Local 197 Webpage"><meta property="twitter:description" content="This is a library for the Local 197 website components"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Local197/website"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#button">Button</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Button/index.js~Button.html">Button</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#footer">Footer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Footer/index.js~Footer.html">Footer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#header">Header</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Header/index.js~Header.html">Header</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#hero">Hero</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Hero/index.js~Hero.html">Hero</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#input">Input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Input/index.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#panel">Panel</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Panel/index.js~Panel.html">Panel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signin">SignIn</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignIn/index.js~SignIn.html">SignIn</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signup">SignUp</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignUp/index.js~SignUp.html">SignUp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snippet">Snippet</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Snippet/index.js~Snippet.html">Snippet</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#text">Text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Text/index.js~Text.html">Text</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">components/Input/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, {Component} from &apos;react&apos;;
+import PropTypes from &apos;prop-types&apos;;
+import { Link } from &apos;react-router-dom&apos;;
+
+import Translate from &apos;containers/Translate&apos;;
+
+require(&apos;./index.scss&apos;);
+
+/**
+ * Styled input field.
+ * @example
+ * let updateText = (e) =&gt; {
+ *  this.setState({field: e.target.value});
+ * }
+ *
+ * &lt;Input
+ *  title=&quot;My Title&quot;
+ *  titleEs=&quot;Mi Titulo&quot;
+ *  placeholder=&quot;Enter text here&quot;
+ *  name=&quot;fieldName&quot;
+ *  type=&quot;text&quot;
+ *  content={this.state.field}
+ *  controlFunc={updateText}
+ *  onEnter={() =&gt; { console.log(this.state.field); }}
+ *  classNAme=&quot;app-ClassExample&quot;
+ * /&gt;
+ * @reactProps {?string} title - The title of the input field.
+ * @reactProps {?string} titleEs - The title of the input field in spanish.
+ * @reactProps {?string} placeholder - Text to display in the input field when
+ *                                    there is no text.
+ * @reactProps {?string} name - The name of the input field.
+ * @reactProps {?string} type - The type of the input field (text, email, password, etc.)
+ * @reactProps {!Object} content - Text to display in the input field as text.
+ * @reactProps {!function(e: {target: {value: string}}}): void} controlFunc -
+ *                                      Function to update the content prop object.
+ * @reactProps {?function} onEnter - Function to run when the Enter key is pressed in the input field.
+ * @reactProps {?string} className - Class name to add a class to the component for extra styling.
+ */
+export default class Input extends Component {
+
+  /** @ignore */
+  render() {
+    return(
+      &lt;div className={`app-Input ${this.props.className}`}&gt;
+        &lt;label className=&quot;app-Input-label&quot;&gt;
+          &lt;Translate language=&quot;en&quot;&gt;
+            {this.props.title}
+          &lt;/Translate&gt;
+          &lt;Translate language=&quot;es&quot;&gt;
+            {this.props.titleEs}
+          &lt;/Translate&gt;
+        &lt;/label&gt;
+        &lt;br /&gt;
+        &lt;input
+          className=&quot;app-Input-field&quot;
+          name={this.props.name}
+          type={this.props.type}
+          value={this.props.content}
+          onChange={this.props.controlFunc}
+          onKeyUp={e =&gt; e.keyCode == 13 &amp;&amp; this.props.onEnter()}
+          placeholder={this.props.placeholder} /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+Input.propTypes = {
+  title: PropTypes.string,
+  titleEs: PropTypes.string,
+  placeholder: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.string,
+  content: PropTypes.string.isRequired,
+  controlFunc: PropTypes.func.isRequired,
+  onEnter: PropTypes.func,
+  className: PropTypes.string
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

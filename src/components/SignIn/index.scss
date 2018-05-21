@@ -4,9 +4,9 @@
   background-color: $light-gray;
   font-size: 0.8em;
   margin: 10px auto;
+  max-width: calc(100% - 20px);
   padding: 0 10px;
   text-align: left;
-  max-width: calc(100% - 20px);
 
   @include breakpoint(small) {
     margin: 0 auto;

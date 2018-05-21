@@ -1,0 +1,1604 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "components/.external-ecmascript.js",
+    "static": true,
+    "longname": "components/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "components/Button/index.js",
+    "content": "import React, {Component} from 'react';\n\nrequire('./index.scss');\n\nexport default class Button extends Component {\n\n  render() {\n    const priority = getPriority(this.props);\n\n    return(\n      <button\n      className={`app-Button${priority} ${this.props.className}`}\n      onClick={this.props.click}\n      disabled={this.props.disabled}>\n        {this.props.children}\n      </button>\n    );\n  }\n}\n\nfunction getPriority(props) {\n  if (props.secondary) {\n    return '-secondary';\n  } else if (props.tertiary) {\n    return '-tertiary';\n  } else {\n    return '-primary';\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Button/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Button",
+    "memberof": "components/Button/index.js",
+    "static": true,
+    "longname": "components/Button/index.js~Button",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Button/index.js",
+    "importStyle": "Button",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Button/index.js~Button",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Button/index.js~Button#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "getPriority",
+    "memberof": "components/Button/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "components/Button/index.js~getPriority",
+    "access": "public",
+    "export": false,
+    "importPath": "website/components/Button/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "components/Footer/index.js",
+    "content": "import React, {Component} from 'react';\n\nimport {\n  github\n} from 'constants/InlineSVGs';\n\nrequire('./index.scss');\n\nexport default class Footer extends Component {\n\n  render() {\n    return(\n      <div className=\"app-Footer\">\n        <div className=\"app-Footer-content\">\n          <div className=\"app-Footer-content-social\">\n            <a dangerouslySetInnerHTML={github} href=\"https://github.com/Local197\" rel=\"noopener\" target=\"__blank\" />\n          </div>\n          <div>\n            <span className=\"app-Footer-content-copy\">2016 - 2018 &copy; UBC Local 197</span>\n          </div>\n        </div>\n      </div>\n    );\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Footer/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "class",
+    "name": "Footer",
+    "memberof": "components/Footer/index.js",
+    "static": true,
+    "longname": "components/Footer/index.js~Footer",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Footer/index.js",
+    "importStyle": "Footer",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Footer/index.js~Footer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Footer/index.js~Footer#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "components/Header/index.js",
+    "content": "import React, {Component} from 'react';\nimport { NavLink } from 'react-router-dom';\n\nimport Button from 'components/Button';\nimport Translate from 'containers/Translate';\nimport logo from 'assets/logo.png';\nimport { logoPlaceholder } from 'constants/InlineSVGs';\n\nrequire('./index.scss');\n\nexport default class Header extends Component {\n\n  render() {\n    return(\n      <div className=\"app-Header\">\n        <div className=\"app-Header-top\">\n          <div className=\"app-Header-container\">\n            <div className=\"app-Header-logo\">\n              <div className=\"app-Header-logo-placeholder\" dangerouslySetInnerHTML={logoPlaceholder}/>\n              <img src={logo}/>\n            </div>\n            <h1>Carpenters&rsquo; Local 197</h1>\n            <h3>Washington D.C., Maryland, & Virginia</h3>\n            <Button tertiary click={() => this.props.onTranslate(this.props.locale) }>\n              <Translate language=\"en\">\n                Traducir a Espa&ntilde;ol\n              </Translate>\n              <Translate language=\"es\">\n                Translate to English\n              </Translate>\n            </Button>\n          </div>\n        </div>\n        <div className=\"app-Header-nav\">\n          <NavLink className=\"app-Header-link\" activeClassName=\"app-Header-link-active\" exact to=\"/\">\n            <Translate language=\"en\">\n              Home\n            </Translate>\n            <Translate language=\"es\">\n              Entrada\n            </Translate>\n          </NavLink>\n          <NavLink className=\"app-Header-link\" activeClassName=\"app-Header-link-active\" to=\"/about\">\n            <Translate language=\"en\">\n              About\n            </Translate>\n            <Translate language=\"es\">\n              Acerca De\n            </Translate>\n          </NavLink>\n          <NavLink className=\"app-Header-link\" activeClassName=\"app-Header-link-active\" to=\"/contractors\">\n            <Translate language=\"en\">\n              Contractors\n            </Translate>\n            <Translate language=\"es\">\n              Contratistas\n            </Translate>\n          </NavLink>\n          <NavLink className=\"app-Header-link\" activeClassName=\"app-Header-link-active\" to=\"/politics\">\n            <Translate language=\"en\">\n              Politics\n            </Translate>\n            <Translate language=\"es\">\n              Politicas\n            </Translate>\n          </NavLink>\n          <NavLink className=\"app-Header-link\" activeClassName=\"app-Header-link-active\" to=\"/area-standards\">\n            <Translate language=\"en\">\n              Standards\n            </Translate>\n            <Translate language=\"es\">\n              Estandares\n            </Translate>\n          </NavLink>\n          <NavLink className=\"app-Header-link\" activeClassName=\"app-Header-link-active\" to=\"/abuse\">\n            <Translate language=\"en\">\n              Abuse\n            </Translate>\n            <Translate language=\"es\">\n              Abuso\n            </Translate>\n          </NavLink>\n          <NavLink className=\"app-Header-link\" activeClassName=\"app-Header-link-active\" to=\"/training\">\n            <Translate language=\"en\">\n              Training\n            </Translate>\n            <Translate language=\"es\">\n              Entrenamiento\n            </Translate>\n          </NavLink>\n        </div>\n      </div>\n    );\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Header/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "class",
+    "name": "Header",
+    "memberof": "components/Header/index.js",
+    "static": true,
+    "longname": "components/Header/index.js~Header",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Header/index.js",
+    "importStyle": "Header",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Header/index.js~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Header/index.js~Header#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
+    "name": "components/Hero/index.js",
+    "content": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\n\nrequire('./index.scss');\n\n/**\n* Hero component with background picture and graphic.\n*\n* @reactProps {!Array} children - Content inside of the tags to be displayed.\n* @reactProps {!string} iconImage - The image that will be shown to the right of the content.\n* @reactProps {?string} className - A class name for exra styling\n* @reactProps {?string} backGroundImage - Background image of the hero component.\n*/\nexport default class Hero extends Component {\n\n  /** @ignore */\n  constructor(props) {\n    super(props);\n\n    /** @ignore */\n    this.bgStyle = {\n      background: 'url(' + this.props.backgroundImage + ') no-repeat center center',\n    };\n  }\n\n  /** @ignore */\n  render() {\n    return(\n      <div className={`app-Hero ${this.props.className}`} style={this.bgStyle}>\n        <div className=\"app-Hero-text\">\n          {this.props.children}\n        </div>\n        <div className=\"app-Hero-icon\">\n          <img src={this.props.iconImage} />\n        </div>\n      </div>\n    );\n  }\n}\n\nHero.propTypes = {\n  children: PropTypes.array.isRequired,\n  iconImage: PropTypes.string.isRequired,\n  className: PropTypes.string,\n  backgroundImage: PropTypes.string\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Hero/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "class",
+    "name": "Hero",
+    "memberof": "components/Hero/index.js",
+    "static": true,
+    "longname": "components/Hero/index.js~Hero",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Hero/index.js",
+    "importStyle": "Hero",
+    "description": "Hero component with background picture and graphic.",
+    "lineNumber": 14,
+    "unknown": [
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{!Array} children - Content inside of the tags to be displayed."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{!string} iconImage - The image that will be shown to the right of the content."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} className - A class name for exra styling"
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} backGroundImage - Background image of the hero component."
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 60,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "components/Hero/index.js~Hero",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Hero/index.js~Hero#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "ignore": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "bgStyle",
+    "memberof": "components/Hero/index.js~Hero",
+    "static": false,
+    "longname": "components/Hero/index.js~Hero#bgStyle",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"background\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Hero/index.js~Hero",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Hero/index.js~Hero#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "ignore": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "file",
+    "name": "components/Input/index.js",
+    "content": "import React, {Component} from 'react';\nimport PropTypes from 'prop-types';\nimport { Link } from 'react-router-dom';\n\nimport Translate from 'containers/Translate';\n\nrequire('./index.scss');\n\n/**\n * Styled input field.\n * @example\n * let updateText = (e) => {\n *  this.setState({field: e.target.value});\n * }\n *\n * <Input\n *  title=\"My Title\"\n *  titleEs=\"Mi Titulo\"\n *  placeholder=\"Enter text here\"\n *  name=\"fieldName\"\n *  type=\"text\"\n *  content={this.state.field}\n *  controlFunc={updateText}\n *  onEnter={() => { console.log(this.state.field); }}\n *  classNAme=\"app-ClassExample\"\n * />\n * @reactProps {?string} title - The title of the input field.\n * @reactProps {?string} titleEs - The title of the input field in spanish.\n * @reactProps {?string} placeholder - Text to display in the input field when\n *                                    there is no text.\n * @reactProps {?string} name - The name of the input field.\n * @reactProps {?string} type - The type of the input field (text, email, password, etc.)\n * @reactProps {!Object} content - Text to display in the input field as text.\n * @reactProps {!function(e: {target: {value: string}}}): void} controlFunc -\n *                                      Function to update the content prop object.\n * @reactProps {?function} onEnter - Function to run when the Enter key is pressed in the input field.\n * @reactProps {?string} className - Class name to add a class to the component for extra styling.\n */\nexport default class Input extends Component {\n\n  /** @ignore */\n  render() {\n    return(\n      <div className={`app-Input ${this.props.className}`}>\n        <label className=\"app-Input-label\">\n          <Translate language=\"en\">\n            {this.props.title}\n          </Translate>\n          <Translate language=\"es\">\n            {this.props.titleEs}\n          </Translate>\n        </label>\n        <br />\n        <input\n          className=\"app-Input-field\"\n          name={this.props.name}\n          type={this.props.type}\n          value={this.props.content}\n          onChange={this.props.controlFunc}\n          onKeyUp={e => e.keyCode == 13 && this.props.onEnter()}\n          placeholder={this.props.placeholder} />\n      </div>\n    );\n  }\n}\n\nInput.propTypes = {\n  title: PropTypes.string,\n  titleEs: PropTypes.string,\n  placeholder: PropTypes.string,\n  name: PropTypes.string,\n  type: PropTypes.string,\n  content: PropTypes.string.isRequired,\n  controlFunc: PropTypes.func.isRequired,\n  onEnter: PropTypes.func,\n  className: PropTypes.string\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Input/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 64,
+    "kind": "class",
+    "name": "Input",
+    "memberof": "components/Input/index.js",
+    "static": true,
+    "longname": "components/Input/index.js~Input",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Input/index.js",
+    "importStyle": "Input",
+    "description": "Styled input field.",
+    "examples": [
+      "let updateText = (e) => {\n this.setState({field: e.target.value});\n}\n\n<Input\n title=\"My Title\"\n titleEs=\"Mi Titulo\"\n placeholder=\"Enter text here\"\n name=\"fieldName\"\n type=\"text\"\n content={this.state.field}\n controlFunc={updateText}\n onEnter={() => { console.log(this.state.field); }}\n classNAme=\"app-ClassExample\"\n/>"
+    ],
+    "lineNumber": 39,
+    "unknown": [
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} title - The title of the input field."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} titleEs - The title of the input field in spanish."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} placeholder - Text to display in the input field when\n                                   there is no text."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} name - The name of the input field."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} type - The type of the input field (text, email, password, etc.)"
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{!Object} content - Text to display in the input field as text."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{!function(e: {target: {value: string}}}): void} controlFunc -\n                                     Function to update the content prop object."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?function} onEnter - Function to run when the Enter key is pressed in the input field."
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{?string} className - Class name to add a class to the component for extra styling."
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Input/index.js~Input",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Input/index.js~Input#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 42,
+    "ignore": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "name": "components/Panel/index.js",
+    "content": "import React, {Component} from 'react';\nimport { Link } from 'react-router-dom';\nimport {\n  Route,\n  Switch\n} from 'react-router-dom';\nimport { Authenticator, Greetings } from 'aws-amplify-react';\n\nimport Button from 'components/Button';\nimport SignIn from 'components/SignIn';\nimport SignUp from 'components/SignUp';\nimport Translate from 'containers/Translate';\nimport HeaderContainer from 'containers/HeaderContainer';\n\nimport { Auth } from 'aws-amplify';\n\nrequire('./index.scss');\n\nexport default class Panel extends Component {\n\n  constructor(props) {\n    super(props);\n    this._generateAuthLinks = this._generateAuthLinks.bind(this);\n    this._signOutSubmit = this._signOutSubmit.bind(this);\n\n    Auth.currentUserInfo().then(user => this.setState(user));\n  }\n\n  render() {\n    return(\n      <div className=\"app-Panel\">\n        {this.props.noHeader ? null :\n          <HeaderContainer />\n        }\n        <div className=\"app-Panel-container\">\n          <div className={`app-Panel-content ${this.props.className}`}>\n            {this.props.children}\n          </div>\n          { this.props.noSidebar == true ? null :\n            <div className=\"app-Panel-sidebar\">\n              {this._generateAuthLinks()}\n              <Translate language=\"en\">\n                <iframe src=\"https://www.youtube.com/embed/3-X5hCxdaLc\" frameBorder=\"0\" allowFullScreen></iframe>\n              </Translate>\n              <Translate language=\"es\">\n                <iframe src=\"https://www.youtube.com/embed/iaBCBXy600E\" frameBorder=\"0\" allowFullScreen></iframe>\n              </Translate>\n              <div className=\"app-Panel-sidebar-links\">\n                {\n                // <Link className=\"app-Panel-sidebar-link\" to=\"/\">\n                //   <Translate language=\"en\">\n                //     Join our Movement\n                //   </Translate>\n                //   <Translate language=\"es\">\n                //     Unete al Movimiento\n                //   </Translate>\n                // </Link>\n                }\n                <a className=\"app-Panel-sidebar-link\" href=\"https://www.facebook.com/UBC197/\" target=\"__blank\">\n                  <Translate language=\"en\">\n                    Facebook\n                  </Translate>\n                  <Translate language=\"es\">\n                    Facebook\n                  </Translate>\n                </a>\n                <a className=\"app-Panel-sidebar-link\" href=\"http://blog.197-carpenters.com/\" target=\"__blank\">\n                  <Translate language=\"en\">\n                    View our Blog\n                  </Translate>\n                  <Translate language=\"es\">\n                    Lee Nuestro Blog\n                  </Translate>\n                </a>\n              </div>\n            </div>\n          }\n        </div>\n      </div>\n    );\n  }\n\n  _generateAuthLinks() {\n    if (this.props.authState == 'signedIn') {\n      return (\n        <div style={{textAlign: \"center\"}}>\n          <div className=\"app-Panel-sidebar-auth\">\n            <Translate language=\"en\">\n              Welcome\n            </Translate>\n            <Translate language=\"es\">\n              ¡Bienvenido\n            </Translate>\n            <span> {this.state &&\n                        this.state.attributes &&\n                        this.state.attributes.name ?\n                        this.state.attributes.name :\n                        this.props.authData.username}\n            !</span>\n          </div>\n          <button\n            onClick={this._signOutSubmit}\n            className=\"app-Panel-sidebar-button\">\n            <Translate language=\"en\">\n              Logout\n            </Translate>\n            <Translate language=\"es\">\n              Cerrar Sesi&oacute;n\n            </Translate>\n          </button>\n        </div>\n      );\n    }\n    return (\n      <div>\n        <Route\n          path=\"/sign-up\"\n          component={SignUp}>\n        </Route>\n        <Route\n          exact\n          path=\"/\"\n          component={SignIn}>\n        </Route>\n      </div>\n    );\n  }\n\n  _signOutSubmit() {\n    Auth.signOut();\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Panel/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 67,
+    "kind": "class",
+    "name": "Panel",
+    "memberof": "components/Panel/index.js",
+    "static": true,
+    "longname": "components/Panel/index.js~Panel",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Panel/index.js",
+    "importStyle": "Panel",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 68,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "components/Panel/index.js~Panel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Panel/index.js~Panel#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Panel/index.js~Panel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Panel/index.js~Panel#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "_generateAuthLinks",
+    "memberof": "components/Panel/index.js~Panel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Panel/index.js~Panel#_generateAuthLinks",
+    "access": "private",
+    "description": null,
+    "lineNumber": 83,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "_signOutSubmit",
+    "memberof": "components/Panel/index.js~Panel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Panel/index.js~Panel#_signOutSubmit",
+    "access": "private",
+    "description": null,
+    "lineNumber": 129,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "components/SignIn/index.js",
+    "content": "import React, {Component} from 'react';\n\nimport Input from 'components/Input';\nimport Button from 'components/Button';\nimport Text from 'components/Text';\nimport Translate from 'containers/Translate';\n\nimport { Auth } from 'aws-amplify';\nimport { Link } from 'react-router-dom';\n\nrequire('./index.scss');\n\nexport default class SignIn extends Component {\n\n  constructor(props) {\n    super(props);\n\n    this._getStatusMessage = this._getStatusMessage.bind(this);\n    this._signInSubmit = this._signInSubmit.bind(this);\n    this._renderInput = this._renderInput.bind(this);\n    this._generateSignIn = this._generateSignIn.bind(this);\n    this._generateWelcome = this._generateWelcome.bind(this);\n\n    this.state = {\n      email: '',\n      password: '',\n      stage: 1\n    }\n  }\n\n  render() {\n    return(\n      <div className=\"app-SignIn\">\n        <Link className=\"app-SignIn-link\" to=\"/sign-up\">\n          <Translate language=\"en\">\n            Sign Up\n          </Translate>\n          <Translate language=\"es\">\n            Reg&iacute;strarse\n          </Translate>\n        </Link>\n        {this._renderInput()}\n        <Text className=\"app-SignIn-status\">\n          <Translate language=\"en\">\n            {this._getStatusMessage(this.state.stage).en}\n          </Translate>\n          <Translate language=\"es\">\n            {this._getStatusMessage(this.state.stage).es}\n          </Translate>\n        </Text>\n      </div>\n    );\n  }\n\n  _renderInput() {\n    if (this.props.authState == 'signedIn')\n      window.location = '/';\n    switch(this.state.stage) {\n      case 1: case 2: case 3:\n        return this._generateSignIn();\n      case 4:\n        return this._generateWelcome();\n    }\n  }\n\n  _generateSignIn() {\n    return (\n      <div className=\"app-SignIn-inputGroup\">\n        <Input\n          title=\"Email\"\n          titleEs=\"Email\"\n          name=\"username\"\n          type=\"email\"\n          content={this.state.email}\n          controlFunc={e => this.setState({email: e.target.value})}\n          placeholder=\"user@domain.com\"\n          />\n        <Input\n          title=\"Password\"\n          titleEs=\"Contrase&ntilde;a\"\n          name=\"password\"\n          type=\"password\"\n          content={this.state.password}\n          controlFunc={e => this.setState({password: e.target.value})}\n          placeholder=\"Enter Password\"\n          onEnter={() => {\n            this.state.password &&\n            this.state.email &&\n            this._signInSubmit()\n          }}\n          />\n        <Button\n          click={this._signInSubmit}\n          className=\"app-SignIn-button\"\n          disabled={\n            this.state.password == '' ||\n            this.state.email == ''\n          }>\n          <Translate language=\"en\">\n            Login\n          </Translate>\n          <Translate language=\"es\">\n            Ingresar\n          </Translate>\n        </Button>\n      </div>\n    );\n  }\n\n  _generateWelcome() {\n    return (\n      <div className=\"app-SignIn-inputGroup\">\n        Welcome!\n        <Link className=\"app-Panel-sidebar-link\" to=\"/sign-in\">\n          <Translate language=\"en\">\n            Go back Home\n          </Translate>\n          <Translate language=\"es\">\n            Rgresar a Inicio\n          </Translate>\n        </Link>\n      </div>\n    );\n  }\n\n  _getStatusMessage(stage) {\n    switch (stage) {\n      case 1:\n        return {\n          en: 'Enter your email and password to sign in.',\n          es: 'Ingrese su email is password para ingresar.'\n        }\n      case 2:\n        return {\n          en: 'Loading...',\n          es: 'Cargando...'\n        }\n      case 3:\n        return {\n          en: 'Incorrect username/password combination',\n          es: 'combinación incorrecta de nombre de usuario/contraseña'\n        }\n      case 4:\n        return {\n          en: 'You\\'re signed in!',\n          es: '¡Has iniciado sesión!'\n        }\n    }\n  }\n\n  _signInSubmit() {\n    this.setState({\n      stage: 2\n    });\n    Auth.signIn(this.state.email, this.state.password)\n      .then(data => {\n        console.log(data)\n        this.props.onStateChange('signedIn');\n        this.setState({\n          stage: 4\n        });\n      })\n      .catch((e) => {\n        this.setState({stage: 3});\n        console.log(e);\n      });\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/SignIn/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "class",
+    "name": "SignIn",
+    "memberof": "components/SignIn/index.js",
+    "static": true,
+    "longname": "components/SignIn/index.js~SignIn",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/SignIn/index.js",
+    "importStyle": "SignIn",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 76,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "member",
+    "name": "state",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#state",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"email\": *, \"password\": *, \"stage\": number}"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "method",
+    "name": "_renderInput",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#_renderInput",
+    "access": "private",
+    "description": null,
+    "lineNumber": 55,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "name": "_generateSignIn",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#_generateSignIn",
+    "access": "private",
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "name": "_generateWelcome",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#_generateWelcome",
+    "access": "private",
+    "description": null,
+    "lineNumber": 110,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "_getStatusMessage",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#_getStatusMessage",
+    "access": "private",
+    "description": null,
+    "lineNumber": 126,
+    "undocument": true,
+    "params": [
+      {
+        "name": "stage",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"en\": string, \"es\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "_signInSubmit",
+    "memberof": "components/SignIn/index.js~SignIn",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignIn/index.js~SignIn#_signInSubmit",
+    "access": "private",
+    "description": null,
+    "lineNumber": 151,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "name": "components/SignUp/index.js",
+    "content": "import React, {Component} from 'react';\n\nimport Input from 'components/Input';\nimport Button from 'components/Button';\nimport Text from 'components/Text';\nimport Translate from 'containers/Translate';\n\nimport { Auth } from 'aws-amplify';\nimport { Link } from 'react-router-dom';\n\nrequire('./index.scss');\n\nexport default class SignUp extends Component {\n\n  constructor(props) {\n    super(props);\n\n    this._usernameInputChange = this._usernameInputChange.bind(this);\n    this._codeInputChange = this._codeInputChange.bind(this);\n    this._getStatusMessage = this._getStatusMessage.bind(this);\n    this._passwordInputChange = this._passwordInputChange.bind(this);\n    this._forgotPasswordSubmit = this._forgotPasswordSubmit.bind(this);\n    this._changePasswordSubmit = this._changePasswordSubmit.bind(this);\n    this._renderInput = this._renderInput.bind(this);\n    this._generateSignUp = this._generateSignUp.bind(this);\n    this._generateConfirm = this._generateConfirm.bind(this);\n\n    this.state = {\n      username: '',\n      code: '',\n      email: '',\n      password: '',\n      stage: 1,\n      readyToSubmit: false\n    }\n  }\n\n  render() {\n    return(\n      <div className=\"app-SignUp\">\n        <Link className=\"app-SignUp-link\" to=\"/\">\n          <Translate language=\"en\">\n            Login\n          </Translate>\n          <Translate language=\"es\">\n            Ingresar\n          </Translate>\n        </Link>\n        {this._renderInput()}\n        <Text className=\"app-SignUp-status\">\n          <Translate language=\"en\">\n            {this._getStatusMessage(this.state.stage).en}\n          </Translate>\n          <Translate language=\"es\">\n            {this._getStatusMessage(this.state.stage).es}\n          </Translate>\n        </Text>\n      </div>\n    );\n  }\n\n  _renderInput() {\n    switch(this.state.stage) {\n      case 1: case 2: case 4:\n        return this._generateSignUp();\n      case 3: case 6:\n        return this._generateConfirm();\n      case 5:\n        return null\n    }\n  }\n\n  _generateSignUp() {\n    return (\n      <div className=\"app-SignUp-inputGroup\">\n        <Input\n          title=\"Union ID\"\n          titleEs=\"ID de Union\"\n          name=\"username\"\n          type=\"text\"\n          content={this.state.username}\n          controlFunc={this._usernameInputChange}\n          placeholder=\"U-####-####\"\n          />\n        <Button\n          click={this._forgotPasswordSubmit}\n          className=\"app-SignUp-button\"\n          disabled={!this.state.readyToSubmit}>\n          Email Code\n        </Button>\n      </div>\n    );\n  }\n\n  _generateConfirm() {\n    return (\n      <div className=\"app-SignUp-inputGroup\">\n        <Input\n          title=\"Code from Email\"\n          titleEs=\"Codigo de Email\"\n          name=\"code\"\n          type=\"text\"\n          content={this.state.code}\n          controlFunc={this._codeInputChange}\n          placeholder=\"######\"\n          />\n        <Input\n          title=\"New Password\"\n          titleEs=\"Nueva Contrase&ntilde;a\"\n          name=\"password\"\n          type=\"password\"\n          content={this.state.password}\n          controlFunc={this._passwordInputChange}\n          placeholder=\"Enter Password\"\n          />\n        <Button\n          click={this._changePasswordSubmit}\n          className=\"app-SignUp-button\">\n          Set Password\n        </Button>\n      </div>\n    );\n  }\n\n  _usernameInputChange(e) {\n    const newUsername = e.target.value;\n    if (/^U$/.test(newUsername)) {\n      this.setState({username: e.target.value + '-'});\n    } else if (/^u$/.test(newUsername)) {\n      this.setState({username: 'U-'});\n    } else if (/^U-[0-9]{1,3}$/.test(newUsername)) {\n      this.setState({username: e.target.value});\n    } else if (/^U-[0-9]{4}$/.test(newUsername)) {\n      this.setState({username: e.target.value + '-'})\n    } else if (/^U-[0-9]{4}-[0-9]{1,3}$/.test(newUsername)) {\n      this.setState({\n        username: e.target.value,\n        readyToSubmit: false\n      });\n    } else if (/^U-[0-9]{4}-[0-9]{4}$/.test(newUsername)) {\n      this.setState({\n        username: e.target.value,\n        readyToSubmit: true\n      });\n    }\n  }\n\n  _getStatusMessage(stage) {\n    switch (stage) {\n      case 1:\n        return {\n          en: 'Enter your Union ID to receive your login code.',\n          es: 'Ingrese su ID de sindicato para recibir su código de inicio de sesión.'\n        }\n      case 2:\n        return {\n          en: 'Loading...',\n          es: 'Cargando...'\n        }\n      case 3:\n        return {\n          en: `An email has been sent to ${this.state.email} with a login code.\\\n              Please enter the code and choose a new password that is at least \\\n              8 characters long, has a number, upper and lowecase letters.`,\n          es: `Se ha enviado un correo electrónico a ${this.state.email} con \\\n              un código de inicio de sesión. Ingrese el código y elija una \\\n              nueva contraseña que sea al menos 8 caracteres de largo, \\\n              contiene un número y letras mayúsculas y minúsculas.`\n        }\n      case 4:\n        return {\n          en: 'Oops! Something went wrong. Make sure you have typed your Union \\\n              ID correctly.',\n          es: '¡Oh no! Algo salió mal. Asegúrate de haber escrito tu ID de \\\n               sindicato correctamente'\n        }\n      case 5:\n       return {\n         en: 'Submitted successfully! You can now log in with your new password.',\n         es: '¡Enviado con éxito! Ahora puede iniciar sesión con su nueva contraseña.'\n       }\n      case 6:\n        return {\n          en: 'Looks like something went wrong...',\n          es: 'Parece que algo nu paso bien...'\n        }\n    }\n  }\n\n  _codeInputChange(e) {\n    this.setState({code: e.target.value});\n  }\n\n  _passwordInputChange(e) {\n    this.setState({password: e.target.value});\n  }\n\n  _forgotPasswordSubmit() {\n    this.setState({\n      stage: 2\n    });\n    Auth.forgotPassword(this.state.username)\n      .then(data => {\n        this.setState({\n          stage: 3,\n          email: data.CodeDeliveryDetails.Destination\n        });\n      })\n      .catch(() => { this.setState({stage: 4})});\n  }\n\n  _changePasswordSubmit() {\n    Auth.forgotPasswordSubmit(\n      this.state.username,\n      this.state.code,\n      this.state.password)\n      .then(data => {\n        console.log(data);\n        Auth.currentAuthenticatedUser().then(data => console.log(data));\n        this.setState({stage: 5});\n      })\n      .catch(error => {\n        console.log(error);\n        this.setState({stage: 6});\n      })\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/SignUp/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 90,
+    "kind": "class",
+    "name": "SignUp",
+    "memberof": "components/SignUp/index.js",
+    "static": true,
+    "longname": "components/SignUp/index.js~SignUp",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/SignUp/index.js",
+    "importStyle": "SignUp",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 91,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true
+  },
+  {
+    "__docId__": 101,
+    "kind": "member",
+    "name": "state",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#state",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"username\": *, \"code\": *, \"email\": *, \"password\": *, \"stage\": number, \"readyToSubmit\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "method",
+    "name": "_renderInput",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_renderInput",
+    "access": "private",
+    "description": null,
+    "lineNumber": 62,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "method",
+    "name": "_generateSignUp",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_generateSignUp",
+    "access": "private",
+    "description": null,
+    "lineNumber": 73,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "method",
+    "name": "_generateConfirm",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_generateConfirm",
+    "access": "private",
+    "description": null,
+    "lineNumber": 95,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "method",
+    "name": "_usernameInputChange",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_usernameInputChange",
+    "access": "private",
+    "description": null,
+    "lineNumber": 125,
+    "undocument": true,
+    "params": [
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "_getStatusMessage",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_getStatusMessage",
+    "access": "private",
+    "description": null,
+    "lineNumber": 148,
+    "undocument": true,
+    "params": [
+      {
+        "name": "stage",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"en\": string, \"es\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "_codeInputChange",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_codeInputChange",
+    "access": "private",
+    "description": null,
+    "lineNumber": 190,
+    "undocument": true,
+    "params": [
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 109,
+    "kind": "method",
+    "name": "_passwordInputChange",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_passwordInputChange",
+    "access": "private",
+    "description": null,
+    "lineNumber": 194,
+    "undocument": true,
+    "params": [
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "_forgotPasswordSubmit",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_forgotPasswordSubmit",
+    "access": "private",
+    "description": null,
+    "lineNumber": 198,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 111,
+    "kind": "method",
+    "name": "_changePasswordSubmit",
+    "memberof": "components/SignUp/index.js~SignUp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/SignUp/index.js~SignUp#_changePasswordSubmit",
+    "access": "private",
+    "description": null,
+    "lineNumber": 212,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 112,
+    "kind": "file",
+    "name": "components/Snippet/index.js",
+    "content": "import React, {Component} from 'react';\n\nrequire('./index.scss');\n\nexport default class Snippet extends Component {\n\n  render() {\n    return(\n      <div className=\"app-Snippet\">\n        <h3>{this.props.heading}</h3>\n        <hr />\n        {this.props.children}\n      </div>\n    );\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Snippet/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 113,
+    "kind": "class",
+    "name": "Snippet",
+    "memberof": "components/Snippet/index.js",
+    "static": true,
+    "longname": "components/Snippet/index.js~Snippet",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Snippet/index.js",
+    "importStyle": "Snippet",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 114,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Snippet/index.js~Snippet",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Snippet/index.js~Snippet#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "file",
+    "name": "components/Text/index.js",
+    "content": "import React, {Component} from 'react';\n\nrequire('./index.scss');\n\nexport default class Text extends Component {\n\n  render() {\n    return(\n      <div className={`app-Text ${this.props.className}`}>\n        {this.props.children}\n      </div>\n    );\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/fonderjose/Projects/UBC/website/src/components/Text/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 116,
+    "kind": "class",
+    "name": "Text",
+    "memberof": "components/Text/index.js",
+    "static": true,
+    "longname": "components/Text/index.js~Text",
+    "access": "public",
+    "export": true,
+    "importPath": "website/components/Text/index.js",
+    "importStyle": "Text",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 117,
+    "kind": "method",
+    "name": "render",
+    "memberof": "components/Text/index.js~Text",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "components/Text/index.js~Text#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# United Brotherhood of Carpenter's Website\nThe official website of the United Brotherhood of Carpenter's Local 197.\n\n![Build Status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiay8yQjNzaTEveDVERlhsSEJxbk1TVzBoWDlWcmJJbTZmMHRkWk1DYk0xZCt5WnZpT2tBN09YdmpxUUdIbUNzNlJtOWtHZ0JPTVpYMzZDblc5WU1LY0wwPSIsIml2UGFyYW1ldGVyU3BlYyI6ImFEWXYxekRiNFdvN283NEciLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)\n\n## Run Dev\n\n1. `npm install` installs all the dependencies needed to build the site.\n2. `npm run start:dev` builds your static assets and places them on the `dist/` folder.\n3. Head to the URL on your command line to see the website, make changes for real-time updates.\n",
+    "longname": "/Users/fonderjose/Projects/UBC/website/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"website\",\n  \"version\": \"1.0.0\",\n  \"description\": \"United Brotherhood of Carpenter's Official Website\",\n  \"main\": \"src/app.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"start:dev\": \"node_modules/.bin/webpack-dev-server  --open --history-api-fallback\",\n    \"build\": \"./node_modules/.bin/webpack -p\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/Local197/website.git\"\n  },\n  \"keywords\": [\n    \"serverless\",\n    \"aws\",\n    \"react\",\n    \"redux\"\n  ],\n  \"author\": \"Jose Canahui\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/Local197/website/issues\"\n  },\n  \"homepage\": \"https://github.com/Local197/website#readme\",\n  \"devDependencies\": {\n    \"babel-eslint\": \"^7.2.3\",\n    \"eslint\": \"^4.4.0\",\n    \"eslint-plugin-babel\": \"^4.1.2\",\n    \"eslint-plugin-react\": \"^7.1.0\",\n    \"redux-devtools\": \"^3.4.1\",\n    \"stylelint\": \"^8.4.0\",\n    \"stylelint-config-sass-guidelines\": \"^4.0.1\",\n    \"stylelint-order\": \"^0.8.0\",\n    \"stylelint-scss\": \"^2.2.0\",\n    \"webpack-dev-server\": \"^2.10.1\"\n  },\n  \"dependencies\": {\n    \"aws-amplify\": \"^0.2.9\",\n    \"aws-amplify-react\": \"^0.1.34\",\n    \"babel-core\": \"^6.25.0\",\n    \"babel-loader\": \"^7.1.1\",\n    \"babel-plugin-transform-react-jsx\": \"^6.24.1\",\n    \"babel-preset-env\": \"^1.6.0\",\n    \"css-loader\": \"^0.28.4\",\n    \"dotenv-webpack\": \"^1.5.4\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-react-plugin\": \"^1.0.1\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"extract-text-webpack-plugin\": \"^3.0.0\",\n    \"file-loader\": \"^0.11.2\",\n    \"html-webpack-plugin\": \"^2.30.1\",\n    \"node-sass\": \"^4.5.3\",\n    \"raw-loader\": \"^0.5.1\",\n    \"react\": \"^16.0.0-beta.3\",\n    \"react-cookie\": \"^2.1.2\",\n    \"react-dom\": \"^16.0.0-beta.3\",\n    \"react-redux\": \"^5.0.6\",\n    \"react-responsive\": \"^1.3.4\",\n    \"react-router-dom\": \"^4.1.2\",\n    \"redux\": \"^3.7.2\",\n    \"redux-thunk\": \"^2.2.0\",\n    \"sass-loader\": \"^6.0.6\",\n    \"style-loader\": \"^0.18.2\",\n    \"svgo\": \"^0.7.2\",\n    \"svgo-loader\": \"^1.2.1\",\n    \"webpack\": \"^3.4.1\"\n  },\n  \"stylelint\": {\n    \"extends\": \"stylelint-config-sass-guidelines\",\n    \"plugins\": \"stylelint-scss\",\n    \"rules\": {\n      \"color-hex-case\": \"upper\",\n      \"selector-no-qualifying-type\": null,\n      \"selector-max-id\": 1,\n      \"selector-class-pattern\": null,\n      \"max-nesting-depth\": null\n    }\n  },\n  \"esdoc\": {\n    \"source\": \"./src/components\",\n    \"destination\": \"./docs\",\n    \"plugins\": [\n      {\n        \"name\": \"esdoc-standard-plugin\",\n        \"option\": {\n          \"brand\": {\n            \"logo\": \"./src/assets/logo.png\",\n            \"title\": \"Local 197 Webpage\",\n            \"description\": \"This is a library for the Local 197 website components\",\n            \"repository\": \"https://github.com/Local197/website\",\n            \"site\": \"https://197-carpenters.com\",\n            \"author\": \"https://www.canahui.me\"\n          }\n        }\n      },\n      {\n        \"name\": \"esdoc-jsx-plugin\"\n      },\n      {\n        \"name\": \"esdoc-react-plugin\"\n      }\n    ]\n  }\n}\n",
+    "longname": "/Users/fonderjose/Projects/UBC/website/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

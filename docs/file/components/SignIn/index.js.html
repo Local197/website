@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">components/SignIn/index.js | Local 197 Webpage</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="This is a library for the Local 197 website components"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Local 197 Webpage"><meta property="twitter:description" content="This is a library for the Local 197 website components"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Local197/website"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#button">Button</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Button/index.js~Button.html">Button</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#footer">Footer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Footer/index.js~Footer.html">Footer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#header">Header</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Header/index.js~Header.html">Header</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#hero">Hero</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Hero/index.js~Hero.html">Hero</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#input">Input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Input/index.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#panel">Panel</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Panel/index.js~Panel.html">Panel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signin">SignIn</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignIn/index.js~SignIn.html">SignIn</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signup">SignUp</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignUp/index.js~SignUp.html">SignUp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snippet">Snippet</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Snippet/index.js~Snippet.html">Snippet</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#text">Text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Text/index.js~Text.html">Text</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">components/SignIn/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, {Component} from &apos;react&apos;;
+
+import Input from &apos;components/Input&apos;;
+import Button from &apos;components/Button&apos;;
+import Text from &apos;components/Text&apos;;
+import Translate from &apos;containers/Translate&apos;;
+
+import { Auth } from &apos;aws-amplify&apos;;
+import { Link } from &apos;react-router-dom&apos;;
+
+require(&apos;./index.scss&apos;);
+
+export default class SignIn extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this._getStatusMessage = this._getStatusMessage.bind(this);
+    this._signInSubmit = this._signInSubmit.bind(this);
+    this._renderInput = this._renderInput.bind(this);
+    this._generateSignIn = this._generateSignIn.bind(this);
+    this._generateWelcome = this._generateWelcome.bind(this);
+
+    this.state = {
+      email: &apos;&apos;,
+      password: &apos;&apos;,
+      stage: 1
+    }
+  }
+
+  render() {
+    return(
+      &lt;div className=&quot;app-SignIn&quot;&gt;
+        &lt;Link className=&quot;app-SignIn-link&quot; to=&quot;/sign-up&quot;&gt;
+          &lt;Translate language=&quot;en&quot;&gt;
+            Sign Up
+          &lt;/Translate&gt;
+          &lt;Translate language=&quot;es&quot;&gt;
+            Reg&amp;iacute;strarse
+          &lt;/Translate&gt;
+        &lt;/Link&gt;
+        {this._renderInput()}
+        &lt;Text className=&quot;app-SignIn-status&quot;&gt;
+          &lt;Translate language=&quot;en&quot;&gt;
+            {this._getStatusMessage(this.state.stage).en}
+          &lt;/Translate&gt;
+          &lt;Translate language=&quot;es&quot;&gt;
+            {this._getStatusMessage(this.state.stage).es}
+          &lt;/Translate&gt;
+        &lt;/Text&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _renderInput() {
+    if (this.props.authState == &apos;signedIn&apos;)
+      window.location = &apos;/&apos;;
+    switch(this.state.stage) {
+      case 1: case 2: case 3:
+        return this._generateSignIn();
+      case 4:
+        return this._generateWelcome();
+    }
+  }
+
+  _generateSignIn() {
+    return (
+      &lt;div className=&quot;app-SignIn-inputGroup&quot;&gt;
+        &lt;Input
+          title=&quot;Email&quot;
+          titleEs=&quot;Email&quot;
+          name=&quot;username&quot;
+          type=&quot;email&quot;
+          content={this.state.email}
+          controlFunc={e =&gt; this.setState({email: e.target.value})}
+          placeholder=&quot;user@domain.com&quot;
+          /&gt;
+        &lt;Input
+          title=&quot;Password&quot;
+          titleEs=&quot;Contrase&amp;ntilde;a&quot;
+          name=&quot;password&quot;
+          type=&quot;password&quot;
+          content={this.state.password}
+          controlFunc={e =&gt; this.setState({password: e.target.value})}
+          placeholder=&quot;Enter Password&quot;
+          onEnter={() =&gt; {
+            this.state.password &amp;&amp;
+            this.state.email &amp;&amp;
+            this._signInSubmit()
+          }}
+          /&gt;
+        &lt;Button
+          click={this._signInSubmit}
+          className=&quot;app-SignIn-button&quot;
+          disabled={
+            this.state.password == &apos;&apos; ||
+            this.state.email == &apos;&apos;
+          }&gt;
+          &lt;Translate language=&quot;en&quot;&gt;
+            Login
+          &lt;/Translate&gt;
+          &lt;Translate language=&quot;es&quot;&gt;
+            Ingresar
+          &lt;/Translate&gt;
+        &lt;/Button&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _generateWelcome() {
+    return (
+      &lt;div className=&quot;app-SignIn-inputGroup&quot;&gt;
+        Welcome!
+        &lt;Link className=&quot;app-Panel-sidebar-link&quot; to=&quot;/sign-in&quot;&gt;
+          &lt;Translate language=&quot;en&quot;&gt;
+            Go back Home
+          &lt;/Translate&gt;
+          &lt;Translate language=&quot;es&quot;&gt;
+            Rgresar a Inicio
+          &lt;/Translate&gt;
+        &lt;/Link&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _getStatusMessage(stage) {
+    switch (stage) {
+      case 1:
+        return {
+          en: &apos;Enter your email and password to sign in.&apos;,
+          es: &apos;Ingrese su email is password para ingresar.&apos;
+        }
+      case 2:
+        return {
+          en: &apos;Loading...&apos;,
+          es: &apos;Cargando...&apos;
+        }
+      case 3:
+        return {
+          en: &apos;Incorrect username/password combination&apos;,
+          es: &apos;combinaci&#xF3;n incorrecta de nombre de usuario/contrase&#xF1;a&apos;
+        }
+      case 4:
+        return {
+          en: &apos;You\&apos;re signed in!&apos;,
+          es: &apos;&#xA1;Has iniciado sesi&#xF3;n!&apos;
+        }
+    }
+  }
+
+  _signInSubmit() {
+    this.setState({
+      stage: 2
+    });
+    Auth.signIn(this.state.email, this.state.password)
+      .then(data =&gt; {
+        console.log(data)
+        this.props.onStateChange(&apos;signedIn&apos;);
+        this.setState({
+          stage: 4
+        });
+      })
+      .catch((e) =&gt; {
+        this.setState({stage: 3});
+        console.log(e);
+      });
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

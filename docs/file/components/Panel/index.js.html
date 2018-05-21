@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">components/Panel/index.js | Local 197 Webpage</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="This is a library for the Local 197 website components"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Local 197 Webpage"><meta property="twitter:description" content="This is a library for the Local 197 website components"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Local197/website"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#button">Button</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Button/index.js~Button.html">Button</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#footer">Footer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Footer/index.js~Footer.html">Footer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#header">Header</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Header/index.js~Header.html">Header</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#hero">Hero</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Hero/index.js~Hero.html">Hero</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#input">Input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Input/index.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#panel">Panel</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Panel/index.js~Panel.html">Panel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signin">SignIn</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignIn/index.js~SignIn.html">SignIn</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#signup">SignUp</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SignUp/index.js~SignUp.html">SignUp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snippet">Snippet</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Snippet/index.js~Snippet.html">Snippet</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#text">Text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Text/index.js~Text.html">Text</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">components/Panel/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, {Component} from &apos;react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
+import {
+  Route,
+  Switch
+} from &apos;react-router-dom&apos;;
+import { Authenticator, Greetings } from &apos;aws-amplify-react&apos;;
+
+import Button from &apos;components/Button&apos;;
+import SignIn from &apos;components/SignIn&apos;;
+import SignUp from &apos;components/SignUp&apos;;
+import Translate from &apos;containers/Translate&apos;;
+import HeaderContainer from &apos;containers/HeaderContainer&apos;;
+
+import { Auth } from &apos;aws-amplify&apos;;
+
+require(&apos;./index.scss&apos;);
+
+export default class Panel extends Component {
+
+  constructor(props) {
+    super(props);
+    this._generateAuthLinks = this._generateAuthLinks.bind(this);
+    this._signOutSubmit = this._signOutSubmit.bind(this);
+
+    Auth.currentUserInfo().then(user =&gt; this.setState(user));
+  }
+
+  render() {
+    return(
+      &lt;div className=&quot;app-Panel&quot;&gt;
+        {this.props.noHeader ? null :
+          &lt;HeaderContainer /&gt;
+        }
+        &lt;div className=&quot;app-Panel-container&quot;&gt;
+          &lt;div className={`app-Panel-content ${this.props.className}`}&gt;
+            {this.props.children}
+          &lt;/div&gt;
+          { this.props.noSidebar == true ? null :
+            &lt;div className=&quot;app-Panel-sidebar&quot;&gt;
+              {this._generateAuthLinks()}
+              &lt;Translate language=&quot;en&quot;&gt;
+                &lt;iframe src=&quot;https://www.youtube.com/embed/3-X5hCxdaLc&quot; frameBorder=&quot;0&quot; allowFullScreen&gt;&lt;/iframe&gt;
+              &lt;/Translate&gt;
+              &lt;Translate language=&quot;es&quot;&gt;
+                &lt;iframe src=&quot;https://www.youtube.com/embed/iaBCBXy600E&quot; frameBorder=&quot;0&quot; allowFullScreen&gt;&lt;/iframe&gt;
+              &lt;/Translate&gt;
+              &lt;div className=&quot;app-Panel-sidebar-links&quot;&gt;
+                {
+                // &lt;Link className=&quot;app-Panel-sidebar-link&quot; to=&quot;/&quot;&gt;
+                //   &lt;Translate language=&quot;en&quot;&gt;
+                //     Join our Movement
+                //   &lt;/Translate&gt;
+                //   &lt;Translate language=&quot;es&quot;&gt;
+                //     Unete al Movimiento
+                //   &lt;/Translate&gt;
+                // &lt;/Link&gt;
+                }
+                &lt;a className=&quot;app-Panel-sidebar-link&quot; href=&quot;https://www.facebook.com/UBC197/&quot; target=&quot;__blank&quot;&gt;
+                  &lt;Translate language=&quot;en&quot;&gt;
+                    Facebook
+                  &lt;/Translate&gt;
+                  &lt;Translate language=&quot;es&quot;&gt;
+                    Facebook
+                  &lt;/Translate&gt;
+                &lt;/a&gt;
+                &lt;a className=&quot;app-Panel-sidebar-link&quot; href=&quot;http://blog.197-carpenters.com/&quot; target=&quot;__blank&quot;&gt;
+                  &lt;Translate language=&quot;en&quot;&gt;
+                    View our Blog
+                  &lt;/Translate&gt;
+                  &lt;Translate language=&quot;es&quot;&gt;
+                    Lee Nuestro Blog
+                  &lt;/Translate&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          }
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _generateAuthLinks() {
+    if (this.props.authState == &apos;signedIn&apos;) {
+      return (
+        &lt;div style={{textAlign: &quot;center&quot;}}&gt;
+          &lt;div className=&quot;app-Panel-sidebar-auth&quot;&gt;
+            &lt;Translate language=&quot;en&quot;&gt;
+              Welcome
+            &lt;/Translate&gt;
+            &lt;Translate language=&quot;es&quot;&gt;
+              &#xA1;Bienvenido
+            &lt;/Translate&gt;
+            &lt;span&gt; {this.state &amp;&amp;
+                        this.state.attributes &amp;&amp;
+                        this.state.attributes.name ?
+                        this.state.attributes.name :
+                        this.props.authData.username}
+            !&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;button
+            onClick={this._signOutSubmit}
+            className=&quot;app-Panel-sidebar-button&quot;&gt;
+            &lt;Translate language=&quot;en&quot;&gt;
+              Logout
+            &lt;/Translate&gt;
+            &lt;Translate language=&quot;es&quot;&gt;
+              Cerrar Sesi&amp;oacute;n
+            &lt;/Translate&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+    return (
+      &lt;div&gt;
+        &lt;Route
+          path=&quot;/sign-up&quot;
+          component={SignUp}&gt;
+        &lt;/Route&gt;
+        &lt;Route
+          exact
+          path=&quot;/&quot;
+          component={SignIn}&gt;
+        &lt;/Route&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  _signOutSubmit() {
+    Auth.signOut();
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
