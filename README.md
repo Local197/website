@@ -1,5 +1,5 @@
 # United Brotherhood of Carpenter's Website
-The official website of the United Brotherhood of Carpenter's Local 197.
+The official website of the United Brotherhood of Carpenter's Local 197. Visit the [docs](https://local197.github.io/website/).
 
 ![Build Status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiay8yQjNzaTEveDVERlhsSEJxbk1TVzBoWDlWcmJJbTZmMHRkWk1DYk0xZCt5WnZpT2tBN09YdmpxUUdIbUNzNlJtOWtHZ0JPTVpYMzZDblc5WU1LY0wwPSIsIml2UGFyYW1ldGVyU3BlYyI6ImFEWXYxekRiNFdvN283NEciLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
