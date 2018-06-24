@@ -1,0 +1,19 @@
+@import 'stylesheets/variables';
+
+.app-Page {
+  background-color: #FFF;
+  box-shadow: $shadow;
+  margin: 0 auto;
+  max-width: 1145px;
+  position: relative;
+  overflow: hidden;
+
+    &-content {
+        width: 100%;
+
+        @include breakpoint(small) {
+            order: 2;
+            width: 100%;
+        }
+    }
+}

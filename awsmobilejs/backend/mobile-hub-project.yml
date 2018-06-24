@@ -21,17 +21,7 @@ features:
     components:
       sign-in-user-pools: !com.amazonaws.mobilehub.v0.UserPoolsIdentityProvider 
         attributes:
-          alias-attributes:
-            - preferred_username
-            - email
-          mfa-configuration: OFF
-          name: userpool
-          password-policy: !com.amazonaws.mobilehub.ConvertibleMap 
-            min-length: '8'
-            require-lower-case: true
-            require-numbers: true
-            require-symbols: false
-            require-upper-case: true
+          user-pool-id: us-east-1_tvfHkVovW
   user-files: !com.amazonaws.mobilehub.v0.UserFiles 
     attributes:
       enabled: true

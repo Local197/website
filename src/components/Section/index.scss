@@ -1,0 +1,29 @@
+@import 'stylesheets/variables';
+
+%base {
+  background-color: $light-gray;
+  padding: 2.5em 1em 1em;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.app-Section {
+  @extend %base;
+  flex: 1 300px;
+
+  &-grow {
+    @extend %base;
+    flex-grow: 2 300px;
+  }
+
+  &-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding: 0.2em 0;
+    width: 100%;
+    background-color: #DDD;
+  }
+}

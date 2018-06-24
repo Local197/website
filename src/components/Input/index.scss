@@ -1,7 +1,7 @@
 @import 'stylesheets/variables';
 
 .app-Input {
-  margin: 10px 0;
+  margin: 0 0 5px;
 
   > input {
     width: calc(100% - 12px);
@@ -11,6 +11,12 @@
     border-bottom: 1px solid $brown;
     color: $brown;
     font-size: 0.8em;
+
+    &-disabled {
+      @extend .app-Input-label;
+      border-bottom: 1px solid $dark-gray;
+      color: $dark-gray;
+    }
   }
 
   &-field {
@@ -21,6 +27,12 @@
     padding: 0 5px;
     text-align: center;
     transition: all 0.15s ease-in-out;
+
+    &-disabled {
+      @extend .app-Input-field;
+      border: 1px dashed $dark-gray;
+      background-color: $light-gray;
+    }
 
     &:focus {
       border: 1px solid $brown;

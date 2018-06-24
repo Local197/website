@@ -7,6 +7,10 @@
   outline: none;
   padding: 0.75em 2em;
   transition: filter 0.2s linear;
+  height: 48px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 5px 0;
 
   &:hover:enabled {
     filter: drop-shadow($shadow-filter);

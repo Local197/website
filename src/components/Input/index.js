@@ -29,9 +29,10 @@ require('./index.scss');
  * @reactProps {?string} placeholder - Text to display in the input field when
  *                                    there is no text.
  * @reactProps {?string} name - The name of the input field.
+ * @reactProps {?boolean} disabled - If the input field is disabled
  * @reactProps {?string} type - The type of the input field (text, email, password, etc.)
  * @reactProps {!Object} content - Text to display in the input field as text.
- * @reactProps {!function(e: {target: {value: string}}}): void} controlFunc -
+ * @reactProps {?function(e: {target: {value: string}}}): void} controlFunc -
  *                                      Function to update the content prop object.
  * @reactProps {?function} onEnter - Function to run when the Enter key is pressed in the input field.
  * @reactProps {?string} className - Class name to add a class to the component for extra styling.
@@ -42,7 +43,7 @@ export default class Input extends Component {
   render() {
     return(
       <div className={`app-Input ${this.props.className}`}>
-        <label className="app-Input-label">
+        <label className={`app-Input-label${this.props.disabled ? "-disabled": ""}`}>
           <Translate language="en">
             {this.props.title}
           </Translate>
@@ -52,7 +53,8 @@ export default class Input extends Component {
         </label>
         <br />
         <input
-          className="app-Input-field"
+          className={`app-Input-field${this.props.disabled ? "-disabled": ""}`}
+          disabled={this.props.disabled}
           name={this.props.name}
           type={this.props.type}
           value={this.props.content}
@@ -71,7 +73,7 @@ Input.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   content: PropTypes.string.isRequired,
-  controlFunc: PropTypes.func.isRequired,
+  controlFunc: PropTypes.func,
   onEnter: PropTypes.func,
   className: PropTypes.string
 }

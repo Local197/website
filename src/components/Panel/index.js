@@ -24,7 +24,6 @@ export default class Panel extends Component {
     this._signOutSubmit = this._signOutSubmit.bind(this);
 
     Auth.currentUserInfo().then(user => this.setState(user));
-    Auth.currentAuthenticatedUser().then(usr => console.log(usr));
   }
 
   render() {
@@ -109,16 +108,14 @@ export default class Panel extends Component {
               Cerrar Sesi&oacute;n
             </Translate>
           </button>
-          <button
-            onClick={() => window.location = '/settings' }
-            className="app-Panel-sidebar-button">
+          <Link className="app-Panel-sidebar-button" to="/settings">
             <Translate language="en">
-              Settings
+            Settings
             </Translate>
             <Translate language="es">
-              Preferencias
+            Preferencias
             </Translate>
-          </button>
+          </Link>
         </div>
       );
     }

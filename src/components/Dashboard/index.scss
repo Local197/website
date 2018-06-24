@@ -1,0 +1,38 @@
+@import 'stylesheets/variables';
+
+.app-Dashboard {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-flow: row;
+  margin: 30px;
+  overflow: hidden;
+
+  > div {
+    margin: 0 15px;
+
+    &:first-child {
+        margin-left: 0;
+        @include breakpoint(medium) {
+            margin: 0 auto 5px;
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+        @include breakpoint(medium) {
+            margin: 5px auto 0;
+        }
+    }
+
+    @include breakpoint(medium) {
+        margin: 5px auto;
+        width: calc(100% - 2em);
+    }
+  }
+
+  @include breakpoint(medium) {
+    margin: 10px;
+    flex-flow: column;
+  }
+}

@@ -19,7 +19,7 @@ const sourceFolder = path.resolve(__dirname, 'src');
 module.exports = {
   entry: ['babel-polyfill','./app.js'],
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   context: path.join(__dirname, 'src'),
