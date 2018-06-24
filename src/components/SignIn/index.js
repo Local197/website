@@ -154,15 +154,10 @@ export default class SignIn extends Component {
     });
     Auth.signIn(this.state.email, this.state.password)
       .then(data => {
-        console.log(data)
-        this.props.onStateChange('signedIn');
-        this.setState({
-          stage: 4
-        });
+        location.reload();
       })
       .catch((e) => {
         this.setState({stage: 3});
-        console.log(e);
       });
   }
 }

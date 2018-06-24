@@ -6,6 +6,7 @@ import Text from 'components/Text';
 import Translate from 'containers/Translate';
 
 import { Auth } from 'aws-amplify';
+import { Analytics } from 'aws-amplify';
 import { Link } from 'react-router-dom';
 
 require('./index.scss');
@@ -31,7 +32,8 @@ export default class SignUp extends Component {
       email: '',
       password: '',
       stage: 1,
-      readyToSubmit: false
+      readyToSubmit: false,
+      phone: ''
     }
   }
 
@@ -126,6 +128,8 @@ export default class SignUp extends Component {
     const newUsername = e.target.value;
     if (/^U$/.test(newUsername)) {
       this.setState({username: e.target.value + '-'});
+    } else if (/^[0-9]$/.test(newUsername)) {
+      this.setState({username: 'U-' + e.target.value});
     } else if (/^u$/.test(newUsername)) {
       this.setState({username: 'U-'});
     } else if (/^U-[0-9]{1,3}$/.test(newUsername)) {
@@ -215,13 +219,10 @@ export default class SignUp extends Component {
       this.state.code,
       this.state.password)
       .then(data => {
-        console.log(data);
-        Auth.currentAuthenticatedUser().then(data => console.log(data));
         this.setState({stage: 5});
       })
       .catch(error => {
-        console.log(error);
         this.setState({stage: 6});
-      })
+      });
   }
 }

@@ -17,7 +17,7 @@ const html = new HtmlWebpackPlugin({
 const sourceFolder = path.resolve(__dirname, 'src');
 
 module.exports = {
-  entry: './app.js',
+  entry: ['babel-polyfill','./app.js'],
   output: {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')

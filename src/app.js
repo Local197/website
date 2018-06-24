@@ -20,6 +20,7 @@ import HomeView from 'views/Home';
 import PoliticalCornerView from 'views/PoliticalCorner';
 import TrainingView from 'views/Training';
 import WorkerAbuseView from 'views/WorkerAbuse';
+import SettingsView from './views/Settings';
 
 require('./app.scss');
 Amplify.configure(aws_exports);
@@ -63,6 +64,10 @@ render((
         <Route
           path="/abuse"
           component={WorkerAbuseView}>
+        </Route>
+        <Route
+          path="/settings"
+          component={SettingsView}>
         </Route>
         <Footer />
       </div>
