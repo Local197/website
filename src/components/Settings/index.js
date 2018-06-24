@@ -1,4 +1,5 @@
 import { Auth } from 'aws-amplify';
+import { SNS } from 'aws-sdk'
 import Dashboard from 'components/Dashboard';
 import Input from 'components/Input';
 import Section from 'components/Section';
@@ -21,8 +22,8 @@ export default class Settings extends Component {
         code: ''
       },
       email: '',
-      verifyPhoneNote: 'Your phone number is not verified! To verify, type your number below and press "Verify Phone".',
-      verifyPhoneNoteEs: '¡Tu numero telefonico no esta verificado! Para verificarlo, entralo abajo y presiona "Verificar Telefono".'
+      verifyPhoneNote: 'Your phone number is not verified! To verify, type your number below and press "Verify Phone"',
+      verifyPhoneNoteEs: '¡Tu numero telefónico no esta verificado! Para verificarlo, ingresalo abajo y presiona "Verificar Telėfono"'
     }
 
     Auth.currentAuthenticatedUser().then(data => {
@@ -54,7 +55,7 @@ export default class Settings extends Component {
           />
           <Input
             title="Union ID"
-            titleEs="Idetificacion de Union"
+            titleEs="Idetificación de Unión"
             name="uid"
             type="text"
             disabled
@@ -84,7 +85,7 @@ export default class Settings extends Component {
           {!this.state.phone_verify.stage && this._generatePhoneInput(canSubmitPhoneChange, phoneNotVerified)}
           <Input
             title="Email"
-            titleEs="Correo Electronico"
+            titleEs="Correo Electrónico"
             name="uid"
             type="text"
             disabled
@@ -93,25 +94,65 @@ export default class Settings extends Component {
           />
         </Section>
         <Section title="Notifications" titleEs="Notificaciones">
-          <Note>
-            <Translate language="en">
-              We ocassionally send important information to our members.
-            </Translate>
-            <Translate language="es">
-              Nosotros ocacionalmente le mandamos a nuestros miembros información importante.
-            </Translate>
-          </Note>
+          {phoneNotVerified &&
+            <Note warning>
+              <Translate language="en">
+                Verify phone before subscribing
+              </Translate>
+              <Translate language="es">
+                Verificar teléfono antes de suscibirse
+              </Translate>
+            </Note>
+          }
+          {this.state.user && !this.state.user.attributes.phone_number &&
+            <Note warning>
+              <Translate language="en">
+                A phone number is needed to subscribe
+              </Translate>
+              <Translate language="es">
+                Se necesita un número telefónico para suscibirse
+              </Translate>
+            </Note>
+          }
+          { this.state.user && (this.state.user.attributes['custom:sns_subscription_arn'] ? this._generateUnsubscribeNote() : this._generateSubscribeNote())}
+          { this.state.user && (this.state.user.attributes['custom:sns_subscription_arn'] ? this._generateUnsubscribeButton() : this._generateSubscribeButton(phoneNotVerified))}
           <Note>
             <Translate language="en">
               Standard SMS charges may apply.
             </Translate>
             <Translate language="es">
-              Cobros estandares de SMS pueden aplicar.
+              Cobros estandares de mensages de texto pueden aplicar.
             </Translate>
           </Note>
         </Section>
       </Dashboard>
     )
+  }
+
+  _generateSubscribeNote() {
+    return (
+      <Note>
+        <Translate language="en">
+          We ocassionally send important information to our members.
+        </Translate>
+        <Translate language="es">
+          Nosotros ocacionalmente le mandamos a nuestros miembros información importante.
+        </Translate>
+      </Note>
+    );
+  }
+
+  _generateUnsubscribeNote() {
+    return (
+      <Note>
+        <Translate language="en">
+          Thank you for subscribing! If you wish to unsubscribe for any reason, you can do so below:
+        </Translate>
+        <Translate language="es">
+          Gracias por suscribirse. Si quieiera dejar de suscribirse, puede apachar el boton abajo:
+        </Translate>
+      </Note>
+    );
   }
 
   _phoneChangeSubmit(e) {
@@ -140,12 +181,12 @@ export default class Settings extends Component {
             A message has been sent to {this.state.phone}. Please enter the verification code.
           </Translate>
           <Translate language="es">
-            Un mensage se ha mandado a {this.state.phone}. Fabor de entrar el codigo de verificación.
+            Un mensage se ha mandado a {this.state.phone}. Favor de entrar el código de verificación.
           </Translate>
         </Note>
         <Input
           title="Verification Code"
-          titleEs="Codigo de Verificación"
+          titleEs="Código de Verificación"
           name="phone_verify"
           type="text"
           onEnter={canSubmitPhoneVerify ? this._phoneVerifySubmit : () => null }
@@ -172,7 +213,7 @@ export default class Settings extends Component {
       <div>
         <Input
           title="Phone Number"
-          titleEs="Numero Teléfonico"
+          titleEs="Numero Telefónico"
           name="phone"
           type="text"
           onEnter={canSubmitPhoneChange ? this._phoneChangeSubmit : () => null }
@@ -188,11 +229,79 @@ export default class Settings extends Component {
             {phoneNotVerified ? "Verify Phone" : "Change Phone"}
           </Translate>
           <Translate language="es">
-            {phoneNotVerified ? "Verificar Telefono" : "Cambiar Teléfono"}
+            {phoneNotVerified ? "Verificar Teléfono" : "Cambiar Teléfono"}
           </Translate>
         </Button>
       </div>
     )
+  }
+
+  _generateSubscribeButton(phoneNotVerified) {
+    return (
+      <Button
+        disabled={phoneNotVerified}
+        click={() => {
+          Auth.currentUserCredentials()
+          .then(credentials => {
+            const sns = new SNS({
+              apiVersion: '2010-03-31',
+              region: 'us-east-1',
+              credentials: credentials
+            }).subscribe({
+              Protocol: 'sms', /* required */
+              TopicArn: 'arn:aws:sns:us-east-1:535191684348:Local197', /* required */
+              Endpoint: this.state.user.attributes.phone_number
+            }, (err, data) => {
+              if (!err) {
+                Auth.updateUserAttributes(this.state.user, {
+                  'custom:sns_subscription_arn': data.SubscriptionArn
+                }).then(location.reload());
+              }
+            });
+          })
+        }}
+      >
+        <Translate language="en">
+          Subscribe SMS
+        </Translate>
+        <Translate language="es">
+          Suscribirse a SMS
+        </Translate>
+      </Button>
+    );
+  }
+
+  _generateUnsubscribeButton(phoneNotVerified) {
+    return (
+      <Button
+        secondary
+        click={() => {
+          Auth.currentUserCredentials()
+          .then(credentials => {
+            const sns = new SNS({
+              apiVersion: '2010-03-31',
+              region: 'us-east-1',
+              credentials: credentials
+            }).unsubscribe({
+              SubscriptionArn: this.state.user.attributes['custom:sns_subscription_arn']
+            }, (err, data) => {
+              if (!err) {
+                Auth.updateUserAttributes(this.state.user, {
+                  'custom:sns_subscription_arn': ''
+                }).then(location.reload());
+              }
+            });
+          })
+        }}
+      >
+        <Translate language="en">
+          Unsibscribe SMS
+        </Translate>
+        <Translate language="es">
+          Dejar la Suscripsion
+        </Translate>
+      </Button>
+    );
   }
 
   _phoneVerifySubmit(e) {

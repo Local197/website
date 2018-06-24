@@ -68,7 +68,7 @@ export default class SignIn extends Component {
       <div className="app-SignIn-inputGroup">
         <Input
           title="Email"
-          titleEs="Email"
+          titleEs="Correo Electrónico"
           name="username"
           type="email"
           content={this.state.email}
