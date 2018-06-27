@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import Panel from 'components/Panel';
-import Text from 'components/Text';
 import Translate from 'containers/Translate';
 import Hero from 'components/Hero';
 

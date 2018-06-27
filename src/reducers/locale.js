@@ -1,7 +1,6 @@
 import { Cookies } from 'react-cookie';
 
 const initialState = getCookieLocale();
-const cookie = new Cookies();
 
 export function getLocale(state = initialState, action = {}) {
   switch (action.type) {
@@ -14,6 +13,7 @@ export function getLocale(state = initialState, action = {}) {
 }
 
 function getCookieLocale() {
+  const cookie = new Cookies();
   const locale = cookie ? cookie.get('reactLocale') : 'en';
   if (locale === 'en' || locale === 'es') {
     return locale;
