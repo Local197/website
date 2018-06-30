@@ -6,7 +6,6 @@ import Text from 'components/Text';
 import Translate from 'containers/Translate';
 
 import { Auth } from 'aws-amplify';
-import { Analytics } from 'aws-amplify';
 import { Link } from 'react-router-dom';
 
 require('./index.scss');
@@ -83,6 +82,7 @@ export default class SignUp extends Component {
           content={this.state.username}
           controlFunc={this._usernameInputChange}
           placeholder="U-####-####"
+          onEnter={() => this.state.readyToSubmit && this._forgotPasswordSubmit()}
           />
         <Button
           click={this._forgotPasswordSubmit}
@@ -114,6 +114,7 @@ export default class SignUp extends Component {
           content={this.state.password}
           controlFunc={this._passwordInputChange}
           placeholder="Enter Password"
+          onEnter={this._changePasswordSubmit}
           />
         <Button
           click={this._changePasswordSubmit}
@@ -132,10 +133,16 @@ export default class SignUp extends Component {
       this.setState({username: 'U-' + e.target.value});
     } else if (/^u$/.test(newUsername)) {
       this.setState({username: 'U-'});
-    } else if (/^U-[0-9]{1,3}$/.test(newUsername)) {
+    } else if (/^U$/.test(newUsername)) {
+      this.setState({username: 'U-'});
+    } else if (/^U-$/.test(newUsername)) {
       this.setState({username: e.target.value});
-    } else if (/^U-[0-9]{4}$/.test(newUsername)) {
-      this.setState({username: e.target.value + '-'})
+    } else if (/^U-[0-9]{1,4}$/.test(newUsername)) {
+      this.setState({username: e.target.value});
+    } else if (/^U-[0-9]{5}$/.test(newUsername)) {
+      this.setState({username: e.target.value.substring(0, 6) + '-' + e.target.value[6]})
+    } else if (/^U-[0-9]{4}-$/.test(newUsername)) {
+      this.setState({username: e.target.value.substring(0, 6)})
     } else if (/^U-[0-9]{4}-[0-9]{1,3}$/.test(newUsername)) {
       this.setState({
         username: e.target.value,
@@ -163,10 +170,10 @@ export default class SignUp extends Component {
         }
       case 3:
         return {
-          en: `An email has been sent to ${this.state.email} with a login code.\
+          en: `An message has been sent to ${this.state.email} with a login code.\
               Please enter the code and choose a new password that is at least \
               8 characters long, has a number, upper and lowecase letters.`,
-          es: `Se ha enviado un correo electrónico a ${this.state.email} con \
+          es: `Se ha enviado un mensaje a ${this.state.email} con \
               un código de inicio de sesión. Ingrese el código y elija una \
               nueva contraseña que sea al menos 8 caracteres de largo, \
               contiene un número y letras mayúsculas y minúsculas.`
@@ -185,8 +192,8 @@ export default class SignUp extends Component {
        }
       case 6:
         return {
-          en: 'Looks like something went wrong...',
-          es: 'Parece que algo nu paso bien...'
+          en: 'Make sure your password is at least 6 characters long.',
+          es: 'Asegurase que su contraseña tenga por lo menos 6 letras.'
         }
     }
   }

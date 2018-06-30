@@ -6,7 +6,7 @@ require('./index.scss');
 /**
 * Hero component with background picture and graphic.
 *
-* @reactProps {!Array} children - Content inside of the tags to be displayed.
+* @reactProps {!Array} children Content inside of the tags to be displayed.
 * @reactProps {!string} iconImage - The image that will be shown to the right of the content.
 * @reactProps {?string} className - A class name for exra styling
 * @reactProps {?string} backGroundImage - Background image of the hero component.

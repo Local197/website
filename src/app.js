@@ -25,7 +25,10 @@ import SettingsView from './views/Settings';
 require('./app.scss');
 Amplify.configure(aws_exports);
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
+  applyMiddleware(thunk)
+));
 
 render((
   <Provider store={store}>

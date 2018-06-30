@@ -63,6 +63,7 @@
       text-align: center;
       text-decoration: none;
       transition: all 0.15s ease-in-out;
+      font-weight: 400;
 
       &:hover {
         background-color: $brown;
@@ -87,6 +88,7 @@
       width: calc(100% - 20px);
       height: 48px;
       box-sizing: border-box;
+      font-weight: 400;
 
       &:hover {
         background-color: $brown;

@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Route,
-  Switch
+  Route
 } from 'react-router-dom';
-import { Authenticator, Greetings } from 'aws-amplify-react';
 
-import Button from 'components/Button';
-import SignIn from 'components/SignIn';
+import SignIn from 'containers/SignIn';
 import SignUp from 'components/SignUp';
+import Note from 'components/Note';
 import Translate from 'containers/Translate';
 import HeaderContainer from 'containers/HeaderContainer';
 
@@ -22,8 +20,6 @@ export default class Panel extends Component {
     super(props);
     this._generateAuthLinks = this._generateAuthLinks.bind(this);
     this._signOutSubmit = this._signOutSubmit.bind(this);
-
-    Auth.currentUserInfo().then(user => this.setState(user));
   }
 
   render() {
@@ -81,7 +77,7 @@ export default class Panel extends Component {
   }
 
   _generateAuthLinks() {
-    if (this.props.authState == 'signedIn') {
+    if (this.props.state == 'signed_in') {
       return (
         <div style={{textAlign: "center"}}>
           <div className="app-Panel-sidebar-auth">
@@ -91,11 +87,11 @@ export default class Panel extends Component {
             <Translate language="es">
               ¡Bienvenido
             </Translate>
-            <span> {this.state &&
-                        this.state.attributes &&
-                        this.state.attributes.name ?
-                        this.state.attributes.name :
-                        this.props.authData.username}
+            <span> {this.props &&
+                    this.props.attributes &&
+                    this.props.attributes.name ?
+                    this.props.attributes.name :
+                    this.props.username}
             !</span>
           </div>
           <button
@@ -121,6 +117,14 @@ export default class Panel extends Component {
     }
     return (
       <div>
+        <Note warning>
+          <Translate language="en">
+          Members, sign up now to receive text alerts!
+          </Translate>
+          <Translate language="es">
+          Miembros, suscríbanse hoy para rexibir alertas de texto!
+          </Translate>
+        </Note>
         <Route
           path="/sign-up"
           component={SignUp}>
@@ -135,6 +139,6 @@ export default class Panel extends Component {
   }
 
   _signOutSubmit() {
-    Auth.signOut().then(() => location.reload());
+    this.props.signOut()
   }
 }

@@ -10,6 +10,10 @@ require('./index.scss');
 
 export default class Header extends Component {
 
+  componentWillMount() {
+    this.props.getUserInfo();
+  }
+
   render() {
     return(
       <div className="app-Header">

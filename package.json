@@ -26,20 +26,25 @@
   "homepage": "https://github.com/Local197/website#readme",
   "devDependencies": {
     "@types/prop-types": "^15.5.3",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^4.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-react": "^7.1.0",
+    "react-styleguidist": "^7.0.20",
     "redux-devtools": "^3.4.1",
     "stylelint": "^8.4.0",
     "stylelint-config-sass-guidelines": "^4.0.1",
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^2.2.0",
+    "webpack": "^3.12.0",
     "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
-    "aws-amplify": "^0.4.6",
+    "aws-amplify": "^0.4.8",
     "aws-amplify-react": "^0.1.52",
     "aws-sdk": "^2.263.1",
     "babel-core": "^6.26.3",
@@ -66,11 +71,11 @@
     "react-router-dom": "^4.1.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "svgo": "^0.7.2",
-    "svgo-loader": "^1.2.1",
-    "webpack": "^3.4.1"
+    "svgo-loader": "^1.2.1"
   },
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",

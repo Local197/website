@@ -59,7 +59,7 @@ export default class Input extends Component {
           type={this.props.type}
           value={this.props.content}
           onChange={this.props.controlFunc}
-          onKeyUp={e => e.keyCode == 13 && this.props.onEnter()}
+          onKeyUp={e => e.keyCode == 13 && this.props.onEnter && this.props.onEnter()}
           placeholder={this.props.placeholder} />
       </div>
     );

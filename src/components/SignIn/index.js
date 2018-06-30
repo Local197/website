@@ -148,16 +148,10 @@ export default class SignIn extends Component {
     }
   }
 
-  _signInSubmit() {
+  async _signInSubmit() {
     this.setState({
       stage: 2
     });
-    Auth.signIn(this.state.email, this.state.password)
-      .then(data => {
-        location.reload();
-      })
-      .catch((e) => {
-        this.setState({stage: 3});
-      });
+    await this.props.signIn(this.state.email, this.state.password);
   }
 }

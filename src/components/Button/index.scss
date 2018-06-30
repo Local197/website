@@ -38,7 +38,7 @@
 
   &-secondary {
     @extend %base;
-    background-color: $white;
+    background-color: darken($white, 5%);
     color: $black;
 
     &:active {

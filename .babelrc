@@ -1,4 +1,4 @@
 {
-  "presets": ["env"],
-  "plugins": ["transform-class-properties", "transform-react-jsx"]
+  "presets": ["env", "react"],
+  "plugins": ["transform-class-properties", "transform-object-rest-spread"]
 }
