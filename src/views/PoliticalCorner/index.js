@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Panel from 'components/Panel';
+import Announcement from 'components/Announcement';
 import Translate from 'containers/Translate';
 
 require('./index.scss');
@@ -11,7 +12,7 @@ export default class PoliticalCornerView extends Component {
     return(
       <div className="app-PoliticalCornerView">
         <Panel noSidebar>
-          <p>coming soon.</p>
+          <Announcement heading="Under Construction" backgroundImage={require('assets/under-construction.jpg')} />
         </Panel>
       </div>
     )

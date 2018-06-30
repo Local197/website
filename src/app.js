@@ -7,11 +7,13 @@ import {
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import ReactGA from 'react-ga';
 import Amplify from 'aws-amplify';
 import aws_exports from 'aws-exports';
 
 import reducer from './reducers';
 import Footer from 'components/Footer';
+import GoogleAnalytics from 'components/GoogleAnalytics';
 import AboutUsView from 'views/AboutUs';
 import AreaStandardsView from 'views/AreaStandards';
 import SignUpView from 'views/SignUp';
@@ -23,11 +25,35 @@ import WorkerAbuseView from 'views/WorkerAbuse';
 import SettingsView from './views/Settings';
 
 require('./app.scss');
+
+/**
+|--------------------------------------------------
+| AWS Amplify configuration
+|--------------------------------------------------
+*/
 Amplify.configure(aws_exports);
 
+/**
+|--------------------------------------------------
+| Google Analytics middleware
+|--------------------------------------------------
+*/
+const ga = store => next => action => {
+  ReactGA.event({
+    category: 'REDUX_ACTION',
+    action: action.type
+  });
+  return next(action);
+}
+
+/**
+|--------------------------------------------------
+| REDUX Store set-up
+|--------------------------------------------------
+*/
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, ga)
 ));
 
 render((
@@ -73,6 +99,7 @@ render((
           component={SettingsView}>
         </Route>
         <Footer />
+        <GoogleAnalytics />
       </div>
     </Router>
   </Provider>

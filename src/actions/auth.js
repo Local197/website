@@ -1,9 +1,8 @@
 import { Auth, Logger } from 'aws-amplify';
+import ReactGA from 'react-ga';
 
 export async function getCurrentUser(dispatch) {
     const user = await Auth.currentUserInfo();
-    console.log(user)
-    console.log(dispatch)
     dispatch({
         type: 'USER_DATA_RECEIVED',
         payload: {
@@ -11,6 +10,12 @@ export async function getCurrentUser(dispatch) {
             state: user ? 'signed_in' : 'signed_out'
         }
     });
+    if (user) {
+        ReactGA.set({
+            userId: user.id,
+            username: user.username 
+        });
+    }
 }
 
 export async function signIn(username, password, dispatch) {
