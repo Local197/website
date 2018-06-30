@@ -32,5 +32,5 @@ export async function signIn(username, password, dispatch) {
 
 export async function signOut(dispatch) {
     await Auth.signOut();
-    dispatch(getCurrentUser(dispatch));
+    getCurrentUser(dispatch);
 }
