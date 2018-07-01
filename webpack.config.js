@@ -24,7 +24,7 @@ module.exports = {
   },
   context: path.join(__dirname, 'src'),
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.wasm', '.mjs', '.js', '.json', 'jsx'],
     modules: ['src', 'node_modules'],
   },
   plugins: [

@@ -5,7 +5,8 @@ import {
   Route
 } from 'react-router-dom';
 import thunk from 'redux-thunk';
-import { createStore, applyMiddleware } from 'redux';
+import promiseMiddleware from 'redux-promise-middleware';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import Amplify from 'aws-amplify';
@@ -53,9 +54,14 @@ const ga = store => next => action => {
 */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
-  applyMiddleware(thunk, ga)
+  applyMiddleware(promiseMiddleware(), thunk, ga)
 ));
 
+/**
+|--------------------------------------------------
+| Hook up react app to root div
+|--------------------------------------------------
+*/
 render((
   <Provider store={store}>
     <Router>
