@@ -43,7 +43,7 @@ export default class Settings extends Component {
     const canSubmitPhoneVerify = !!this.state.phone_verify.code;
     const phoneNotVerified = this.state.user && this.state.user.attributes.phone_number && !this.state.user.attributes.phone_number_verified;
     return(
-      <Dashboard>
+      <Dashboard title="My Settings" titleEs="Mis Ajustes">
         <Section title="User Info" titleEs="Informacion de Usuario">
           <Input
             title="Name"
@@ -67,7 +67,7 @@ export default class Settings extends Component {
             name="role"
             type="text"
             disabled
-            content={this.state.user && (this.state.user.attributes.role || 'Member') || 'Loading...'}
+            content={this.state.user && (this.state.user.attributes['custom:role'] || 'Member') || 'Loading...'}
           />
         </Section>
         <Section grow title="User Settings" titleEs="Ajustes de Usuario">
@@ -116,14 +116,6 @@ export default class Settings extends Component {
           }
           { this.state.user && (this.state.user.attributes['custom:sns_subscription_arn'] ? this._generateUnsubscribeNote() : this._generateSubscribeNote())}
           { this.state.user && (this.state.user.attributes['custom:sns_subscription_arn'] ? this._generateUnsubscribeButton() : this._generateSubscribeButton(phoneNotVerified))}
-          <Note>
-            <Translate language="en">
-              Standard SMS charges may apply.
-            </Translate>
-            <Translate language="es">
-              Cobros estandares de mensages de texto pueden aplicar.
-            </Translate>
-          </Note>
         </Section>
       </Dashboard>
     )
@@ -133,10 +125,10 @@ export default class Settings extends Component {
     return (
       <Note>
         <Translate language="en">
-          We ocassionally send important information to our members.
+          Subscribe below to receive text messages! We ocassionally send important information to our members.
         </Translate>
         <Translate language="es">
-          Nosotros ocacionalmente le mandamos a nuestros miembros información importante.
+          Suscribete abajo pare recibir mensajes de texto. Nosotros ocacionalmente le mandamos a nuestros miembros información importante.
         </Translate>
       </Note>
     );

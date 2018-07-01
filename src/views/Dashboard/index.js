@@ -1,11 +1,11 @@
 import Page from 'components/Page';
 import React, { Component } from 'react';
-import Settings from 'components/Settings';
+import Settings from 'containers/Settings';
 
 
 require('./index.scss');
 
-export default class SettingsView extends Component {
+export default class DashboardView extends Component {
 
   constructor (props) {
     super(props);

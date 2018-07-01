@@ -14,7 +14,7 @@ import aws_exports from 'aws-exports';
 
 import reducer from './reducers';
 import Footer from 'components/Footer';
-import GoogleAnalytics from 'components/GoogleAnalytics';
+import Static from 'containers/Static';
 import AboutUsView from 'views/AboutUs';
 import AreaStandardsView from 'views/AreaStandards';
 import SignUpView from 'views/SignUp';
@@ -23,7 +23,7 @@ import HomeView from 'views/Home';
 import PoliticalCornerView from 'views/PoliticalCorner';
 import TrainingView from 'views/Training';
 import WorkerAbuseView from 'views/WorkerAbuse';
-import SettingsView from './views/Settings';
+import DashboardView from './views/Dashboard';
 
 require('./app.scss');
 
@@ -101,11 +101,11 @@ render((
           component={WorkerAbuseView}>
         </Route>
         <Route
-          path="/settings"
-          component={SettingsView}>
+          path="/dashboard"
+          component={DashboardView}>
         </Route>
         <Footer />
-        <GoogleAnalytics />
+        <Static />
       </div>
     </Router>
   </Provider>

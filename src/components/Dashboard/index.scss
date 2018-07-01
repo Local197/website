@@ -7,6 +7,20 @@
   flex-flow: row;
   margin: 30px;
   overflow: hidden;
+  padding-top: 45px;
+
+  &-title {
+      position: absolute;
+      margin: 0;
+      top: 0;
+      left: 15px;
+      font-size: 28px;
+      color: $brown-dark;
+
+      @include breakpoint(medium) {
+        left: 0px;
+      }
+  }
 
   > div {
     margin: 0 15px;

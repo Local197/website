@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 
 import { getLocale } from 'reducers/locale';
 import { toggleLocale } from 'actions/locale';
-import { getCurrentUser } from 'actions/auth';
 import Header from 'components/Header';
 
 const mapStateToProps = (state) => ({
@@ -13,8 +12,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onTranslate: locale => {
       dispatch(toggleLocale(locale))
-    },
-    getUserInfo: () => getCurrentUser(dispatch)
+    }
   }
 }
 

@@ -104,12 +104,12 @@ export default class Panel extends Component {
               Cerrar Sesi&oacute;n
             </Translate>
           </button>
-          <Link className="app-Panel-sidebar-button" to="/settings">
+          <Link className="app-Panel-sidebar-button" to="/dashboard">
             <Translate language="en">
-            Settings
+            My Dashboard
             </Translate>
             <Translate language="es">
-            Preferencias
+            Mi Página
             </Translate>
           </Link>
         </div>
