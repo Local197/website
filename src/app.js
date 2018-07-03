@@ -36,9 +36,12 @@ Amplify.configure(aws_exports);
 
 /**
 |--------------------------------------------------
-| Google Analytics middleware
+| Google Analytics init &  middleware
 |--------------------------------------------------
 */
+const ga_token = document.getElementById("root").getAttribute('data-ga-token');
+ReactGA.initialize(ga_token);
+
 const ga = store => next => action => {
   ReactGA.event({
     category: 'REDUX_ACTION',
