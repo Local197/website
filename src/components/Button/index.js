@@ -11,7 +11,9 @@ export default class Button extends Component {
       <button
       className={`app-Button${priority} ${this.props.className}`}
       onClick={this.props.click}
-      disabled={this.props.disabled}>
+      disabled={this.props.disabled}
+      style={this.props.style}
+      >
         {this.props.children}
       </button>
     );

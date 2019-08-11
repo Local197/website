@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import { Storage } from 'aws-amplify';
 import {
   Route
 } from 'react-router-dom';
 
 import SignIn from 'containers/SignIn';
 import SignUp from 'components/SignUp';
+import Button from 'components/Button';
 import Note from 'components/Note';
 import Translate from 'containers/Translate';
 import HeaderContainer from 'containers/HeaderContainer';
@@ -32,6 +34,7 @@ export default class Panel extends Component {
           <div className={`app-Panel-content ${this.props.className}`}>
             {this.props.children}
           </div>
+
           { this.props.noSidebar == true ? null :
             <div className="app-Panel-sidebar">
               {this._generateAuthLinks()}
@@ -67,13 +70,23 @@ export default class Panel extends Component {
                   <Translate language="es">
                     Lee Nuestro Blog
                   </Translate>
-                </a>
+                </a>            
               </div>
             </div>
           }
         </div>
       </div>
     );
+  }
+
+  _openLink (key, level) {
+    Storage.get(key, { 
+      level,
+      expires: 5
+    })
+    .then(result => {
+      window.open(result);
+    });
   }
 
   _generateAuthLinks() {
@@ -94,6 +107,18 @@ export default class Panel extends Component {
                     this.props.username}
             !</span>
           </div>
+          <Button
+            tertiary
+            className="app-Panel-sidebar-link"
+            click={() => this._openLink('197-ratified-bylaws.pdf')}
+          >
+            <Translate language="en">
+              Ratified Bylaws
+            </Translate>
+            <Translate language="es">       
+              Estatutos Ratificados
+            </Translate>
+          </Button>
           <button
             onClick={this._signOutSubmit}
             className="app-Panel-sidebar-button">
@@ -125,6 +150,19 @@ export default class Panel extends Component {
           Miembros, suscríbanse hoy para rexibir alertas de texto!
           </Translate>
         </Note>
+        <Button
+          tertiary
+          style={{ width: 'calc(100% - 20px)'}}
+          className="app-Panel-sidebar-link"
+          click={() => this._openLink('197-ratified-bylaws.pdf')}
+        >
+          <Translate language="en">
+            Ratified Bylaws
+          </Translate>
+          <Translate language="es">       
+            Estatutos Ratificados
+          </Translate>
+        </Button>
         <Route
           path="/sign-up"
           component={SignUp}>

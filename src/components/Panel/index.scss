@@ -55,6 +55,7 @@
       color: $brown;
       cursor: pointer;
       display: block;
+      width: calc(100% - 20px - 0.4em);
       flex-grow: 1;
       font-size: $font-paragraph-s;
       margin: 10px;
