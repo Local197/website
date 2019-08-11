@@ -110,6 +110,7 @@ export default class Panel extends Component {
           <Button
             tertiary
             className="app-Panel-sidebar-link"
+            style={{ width: 'calc(100% - 20px)'}}
             click={() => this._openLink('197-ratified-bylaws.pdf')}
           >
             <Translate language="en">
