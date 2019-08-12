@@ -109,8 +109,8 @@ export default class Panel extends Component {
           </div>
           <Button
             tertiary
+            style={{width: 'calc(100% - 20px)'}}
             className="app-Panel-sidebar-link"
-            style={{ width: 'calc(100% - 20px)'}}
             click={() => this._openLink('197-ratified-bylaws.pdf')}
           >
             <Translate language="en">
@@ -153,7 +153,7 @@ export default class Panel extends Component {
         </Note>
         <Button
           tertiary
-          style={{ width: 'calc(100% - 20px)'}}
+          style={{width: 'calc(100% - 20px)'}}
           className="app-Panel-sidebar-link"
           click={() => this._openLink('197-ratified-bylaws.pdf')}
         >
