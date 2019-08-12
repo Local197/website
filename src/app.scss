@@ -147,14 +147,3 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-
-#root {
-  > div {
-    > div:first-child {
-      > div:nth-child(3) { // hack to set position: fixed hamburger menu container
-        position: fixed !important;
-        right: 0;
-      }
-    }
-  }
-}
