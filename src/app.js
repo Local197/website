@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import Amplify from 'aws-amplify';
 import aws_exports from 'aws-exports';
-import { reveal as Menu } from 'react-burger-menu'
+import { push as Menu } from 'react-burger-menu'
 
 import reducer from './reducers';
 import Footer from 'components/Footer';
