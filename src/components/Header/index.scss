@@ -15,12 +15,18 @@
   }
 
   &-nav {
-    background-color: $brown;
-    display: flex;
-    flex-flow: row;
-    margin: 0 auto;
-    max-width: 1145px;
-    position: relative;
+    > div {
+      background-color: $brown;
+      display: flex;
+      flex-flow: row;
+      margin: 0 auto;
+      max-width: 1145px;
+      position: relative;
+
+      @include breakpoint(small) {
+        display: none;
+      };
+    }
   }
 
   %base-link {

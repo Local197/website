@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import Amplify from 'aws-amplify';
 import aws_exports from 'aws-exports';
+import { reveal as Menu } from 'react-burger-menu'
 
 import reducer from './reducers';
 import Footer from 'components/Footer';
@@ -24,6 +25,7 @@ import PoliticalCornerView from 'views/PoliticalCorner';
 import TrainingView from 'views/Training';
 import WorkerAbuseView from 'views/WorkerAbuse';
 import DashboardView from './views/Dashboard';
+import Nav from './components/nav';
 
 require('./app.scss');
 
@@ -68,47 +70,52 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
 render((
   <Provider store={store}>
     <Router>
-      <div className="app">
-        <Route
-          exact
-          path="/(|sign-in|sign-up)/"
-          component={HomeView}>
-        </Route>
-        <Route
-          exact
-          path="/about"
-          component={AboutUsView}>
-        </Route>
-        <Route
-          path="/area-standards"
-          component={AreaStandardsView}>
-        </Route>
-        <Route
-          path="/contractors"
-          component={ContractorsView}>
-        </Route>
-        <Route
-          path="/member-benefits"
-          component={SignUpView}>
-        </Route>
-        <Route
-          path="/politics"
-          component={PoliticalCornerView}>
-        </Route>
-        <Route
-          path="/training"
-          component={TrainingView}>
-        </Route>
-        <Route
-          path="/abuse"
-          component={WorkerAbuseView}>
-        </Route>
-        <Route
-          path="/dashboard"
-          component={DashboardView}>
-        </Route>
-        <Footer />
-        <Static />
+      <div>
+        <Menu right noOverlay pageWrapId={ "page-wrap" } outerContainerId={ "root" }>
+          <Nav />
+        </Menu>
+        <div className="app" id="page-wrap">
+          <Route
+            exact
+            path="/(|sign-in|sign-up)/"
+            component={HomeView}>
+          </Route>
+          <Route
+            exact
+            path="/about"
+            component={AboutUsView}>
+          </Route>
+          <Route
+            path="/area-standards"
+            component={AreaStandardsView}>
+          </Route>
+          <Route
+            path="/contractors"
+            component={ContractorsView}>
+          </Route>
+          <Route
+            path="/member-benefits"
+            component={SignUpView}>
+          </Route>
+          <Route
+            path="/politics"
+            component={PoliticalCornerView}>
+          </Route>
+          <Route
+            path="/training"
+            component={TrainingView}>
+          </Route>
+          <Route
+            path="/abuse"
+            component={WorkerAbuseView}>
+          </Route>
+          <Route
+            path="/dashboard"
+            component={DashboardView}>
+          </Route>
+          <Footer />
+          <Static />
+        </div>
       </div>
     </Router>
   </Provider>
