@@ -71,7 +71,7 @@ render((
   <Provider store={store}>
     <Router>
       <div>
-        <Menu right noOverlay pageWrapId={ "page-wrap" } outerContainerId={ "root" }>
+        <Menu right pageWrapId={ "page-wrap" } outerContainerId={ "root" }>
           <Nav />
         </Menu>
         <div className="app" id="page-wrap">

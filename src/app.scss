@@ -81,11 +81,12 @@ h3 {
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: $light-gray;
+  box-shadow: $shadow-menu;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: $brown;
+  background: $light-gray;
 }
 
 /* Position and sizing of clickable cross button */
@@ -145,4 +146,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+#root {
+  > div {
+    > div:first-child {
+      > div:nth-child(2) { // hack to set position: fixed hamburger menu container
+        position: fixed !important;
+        right: 0;
+      }
+    }
+  }
 }
