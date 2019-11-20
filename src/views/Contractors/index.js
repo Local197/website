@@ -48,7 +48,7 @@ export default class ContractorsView extends Component {
             <p>
               <Translate language="en">Let us offer you a visit to one of our centers. Please schedule a visit by calling us at </Translate>
               <Translate language="es">Perm&iacute;tanos reservarle una visita a una de nuestras instalaciones. Favor de hacer una cita llamandonos a </Translate>
-              <span>(301) 736 - 1696</span>
+              <span>(301) 735 - 6660</span>
             </p>
           </Text>
         </Panel>
