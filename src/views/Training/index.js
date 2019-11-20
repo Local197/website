@@ -76,7 +76,7 @@ export default class TrainingView extends Component {
               <Translate language="es">
                 Tel&eacute;fono:
               </Translate>
-              (301)736-1696
+              <span>(301) 735 - 6660</span>
             </p>
             <p>
               <Translate language="en">
